@@ -1,0 +1,10 @@
+.Layout-class
+{
+    width: 100%;
+    min-width: 100vh;
+    margin: 0;
+}
+header, main, footer {
+  margin: 0;
+  padding: 0;
+}

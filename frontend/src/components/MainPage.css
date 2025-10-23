@@ -1,0 +1,184 @@
+:root {
+    --scrollTop: 0;
+    --scrollText: 0;
+
+}
+
+.BackgroundPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100vw;
+    min-height: 100vh;
+    /* background-color: aquamarine; */
+    margin: 0;
+    padding: 0;
+}
+
+.FirstCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+
+}
+
+.Layer1 {
+    inset: 0;
+    bottom: -55%;
+    position: absolute;
+    background-image: url(../assets/bottomgood2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: start center;
+    z-index: 4;
+    transform: translateY(calc(var(--scrollTop)/-10));
+    transition: transform 0.5s ease-out;
+}
+
+.Layer2 {
+    inset: 0;
+    top: 10%;
+    position: absolute;
+    background-image: url(../assets/HouseEnd1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: start center;
+    z-index: 3;
+    /* box-shadow: 50px 50px 50px 10px black; */
+    transform: translateY(calc(var(--scrollTop)/7));
+    transition: transform 0.5s ease-out;
+}
+
+.Layer3 {
+    inset: 0;
+    position: absolute;
+    background-image: url(../assets/AIHouse.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: start center;
+    z-index: 1;
+
+}
+
+.Layer4 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200px;
+    font-weight: bolder;
+    letter-spacing: -5px;
+    z-index: 2;
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: translateY(calc(var(--scrollTop)/4) ); */
+
+
+
+}
+
+.FirstCol2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+    flex-direction: row;
+    background-color: #0d1216a3;
+}
+
+.FirstRow {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    /* transform: translateX(calc(-1000px + var(--scrollText))); */
+    /* transition: transform 0.3s ease-out; */
+
+    /* background-color: rgba(255, 0, 0, 0.5); */
+}
+
+.SecondRow {
+    width: 50%;
+    height: 100vh;
+    /* background-color: rgba(255, 0, 0, 0.5); */
+    background-image: url(../assets/planofhouse1.png);
+
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.hText {
+    width: 100%;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.hText p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: -2px;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+
+}
+
+.PText {
+    flex: 1;
+    width: 80%;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /* background-color: red; */
+}
+
+.PText :nth-last-child(1) {
+    border-bottom: 0;
+
+}
+
+.RowFontText {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    padding: 20px;
+    /* transform: translateX(-100vw); */
+    /* opacity: 0; */
+}
+.ThirdCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1000px;
+    background-color: #0d1216;
+}

@@ -1,0 +1,10 @@
+.HeaderMenu-class
+{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 70px;
+    top: 40px;
+    left: 0;
+    z-index: 10;
+}
