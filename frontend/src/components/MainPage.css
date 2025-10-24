@@ -170,8 +170,11 @@
     /* transform: translateX(-100vw); */
     /* opacity: 0; */
 }
+
 .ThirdCol {
-    display: flex;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -181,4 +184,95 @@
     position: relative;
     perspective: 1000px;
     background-color: #0d1216;
+}
+
+.EmptySpace {
+    width: 100%;
+    /* background-color: rebeccapurple; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.carusel1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    background-color: rebeccapurple;
+    height: 100px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(-100%);
+    }
+    63% {
+        transform: translateY(-100%);
+    }
+    66% {
+        transform: translateY(-200%);
+    }
+    96% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.carusel {
+
+    width: 80%;
+    height: 400px;
+    /* background-color: rgb(255, 0, 0); */
+    border-radius: 18px;
+    /* position: relative; */
+    /* animation: slideIn 1s ease-out forwards; */
+    overflow: hidden;
+}
+
+.innerCarusel {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 18px;
+    position: relative;
+    animation: slideIn 10s ease-out infinite;
+}
+
+.innerItem1,
+.innerItem2,
+.innerItem3 {
+
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+.innerItem2 {
+    top: 50%;
+    background-color: rgb(140, 0, 255);
+}
+
+.innerItem3 {
+    top: 50%;
+    background-color: rgb(255, 0, 0);
+
 }

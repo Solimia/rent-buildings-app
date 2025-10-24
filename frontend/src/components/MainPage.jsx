@@ -72,7 +72,20 @@ export default function MainPage() {
         <div className="SecondRow"></div>
       </div>
       <div className='ThirdCol'>
-        
+        <div className="carusel1">
+
+        </div>
+        <div className='EmptySpace'>
+          <div className="carusel">
+            <div className='innerCarusel'>
+              <div className="innerItem1"></div>
+              <div className="innerItem2"></div>
+              <div className="innerItem3"></div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   )
