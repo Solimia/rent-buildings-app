@@ -26,6 +26,7 @@
     overflow: hidden;
     position: relative;
     perspective: 1000px;
+    /* filter: blur(5px); */
 
 }
 
@@ -106,10 +107,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    /* transform: translateX(1000px); */
 
     /* transform: translateX(calc(-1000px + var(--scrollText))); */
     /* transition: transform 0.3s ease-out; */
-
     /* background-color: rgba(255, 0, 0, 0.5); */
 }
 
@@ -184,6 +185,12 @@
     position: relative;
     perspective: 1000px;
     background-color: #0d1216;
+    gap: clamp(20px, 5vw, 30px);
+
+    box-sizing: border-box;
+    padding: clamp(20px, 5vw, 40px);
+    /* padding-right: clamp(20px, 5vw, 100px); */
+
 }
 
 .EmptySpace {
@@ -203,43 +210,19 @@
     justify-content: center;
     align-items: center;
     width: 30vw;
-    background-color: rebeccapurple;
-    height: 100px;
+    background-color: rgb(255, 0, 0);
+    height: 100%;
+    border-radius: 18px;
+    transform-origin: left bottom;
+    /* transform: rotate(-70deg); */
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(0);
-    }
-    30% {
-        transform: translateY(0);
-    }
-    33% {
-        transform: translateY(-100%);
-    }
-    63% {
-        transform: translateY(-100%);
-    }
-    66% {
-        transform: translateY(-200%);
-    }
-    96% {
-        transform: translateY(-200%);
-    }
-    100% {
-        transform: translateY(0);
-    }
 
-}
 
 .carusel {
-
-    width: 80%;
-    height: 400px;
-    /* background-color: rgb(255, 0, 0); */
+    width: 100%;
+    height: 100%;
     border-radius: 18px;
-    /* position: relative; */
-    /* animation: slideIn 1s ease-out forwards; */
     overflow: hidden;
 }
 
@@ -249,7 +232,7 @@
     background-color: white;
     border-radius: 18px;
     position: relative;
-    animation: slideIn 10s ease-out infinite;
+    transition: transform 0.5s ease-out;
 }
 
 .innerItem1,
@@ -267,13 +250,21 @@
 }
 
 .innerItem2 {
-    top: 50%;
+    top: 150%;
     background-color: rgb(140, 0, 255);
 }
 
 .innerItem3 {
-    top: 50%;
+    top: 250%;
     background-color: rgb(255, 0, 0);
 
-    
+}
+
+.ImageBtn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }
