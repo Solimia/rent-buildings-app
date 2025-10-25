@@ -1,0 +1,133 @@
+/* === Загальні стилі === */
+.home {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+/* === Hero === */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  animation: slideUp 1.5s ease-out;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.cta {
+  background-color: #ff914d;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background-color: #ffb085;
+  transform: scale(1.1);
+}
+
+/* === Cards Section === */
+.cards-section {
+  text-align: center;
+  padding: 70px 20px;
+  background: white;
+}
+
+.cards-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  animation: fadeIn 2s;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  width: 300px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  animation: popUp 2s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+}
+
+.card p {
+  color: #666;
+  padding-bottom: 20px;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #222;
+  color: #ddd;
+}
+
+/* === Анімації === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
