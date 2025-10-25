@@ -42,7 +42,7 @@ export default function MainPage() {
       const CardRotateR = CardRotateRef.current;
       if (CardRotateR) {
         CardRotateR.style.transform = `rotate(${-100 + scrollFraction * 100}deg)
-         scale(${.5 + scrollFraction / 2})`;
+         scale(${0 + scrollFraction })`;
         CardRotateR.style.opacity = 0.25 + scrollFraction3 * 3;
        
       }
@@ -147,6 +147,7 @@ export default function MainPage() {
         </div>
 
       </div>
+      
     </div>
   )
 }

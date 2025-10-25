@@ -41,6 +41,7 @@
     z-index: 4;
     transform: translateY(calc(var(--scrollTop)/-10));
     transition: transform 0.5s ease-out;
+    will-change: transform;
 }
 
 .Layer2 {
@@ -52,9 +53,9 @@
     background-repeat: no-repeat;
     background-position: start center;
     z-index: 3;
-    /* box-shadow: 50px 50px 50px 10px black; */
     transform: translateY(calc(var(--scrollTop)/7));
     transition: transform 0.5s ease-out;
+    will-change: transform;
 }
 
 .Layer3 {
@@ -65,7 +66,6 @@
     background-repeat: no-repeat;
     background-position: start center;
     z-index: 1;
-
 }
 
 .Layer4 p {
@@ -79,10 +79,6 @@
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* transform: translateY(calc(var(--scrollTop)/4) ); */
-
-
-
 }
 
 .FirstCol2 {
@@ -107,23 +103,15 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* transform: translateX(1000px); */
-
-    /* transform: translateX(calc(-1000px + var(--scrollText))); */
-    /* transition: transform 0.3s ease-out; */
-    /* background-color: rgba(255, 0, 0, 0.5); */
 }
 
 .SecondRow {
     width: 50%;
     height: 100vh;
-    /* background-color: rgba(255, 0, 0, 0.5); */
     background-image: url(../assets/planofhouse1.png);
-
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center center;
-
 }
 
 .hText {
@@ -168,8 +156,6 @@
     border-bottom: 1px solid white;
     box-sizing: border-box;
     padding: 20px;
-    /* transform: translateX(-100vw); */
-    /* opacity: 0; */
 }
 
 .ThirdCol {
@@ -184,7 +170,8 @@
     overflow: hidden;
     position: relative;
     perspective: 1000px;
-    background-color: #0d1216;
+    background: linear-gradient(-170deg, #0d1216, #001629);
+    ;
     gap: clamp(20px, 5vw, 30px);
 
     box-sizing: border-box;
@@ -210,11 +197,17 @@
     justify-content: center;
     align-items: center;
     width: 30vw;
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.053);
     height: 100%;
     border-radius: 18px;
     transform-origin: left bottom;
+    border: 1px solid rgba(255, 255, 255, 0.36);
+    outline: none;
+    backdrop-filter: blur(10px);
+    will-change: rotate;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.048);
     /* transform: rotate(-70deg); */
+    transition: all   0.2s ease-out ;
 }
 
 
@@ -224,6 +217,8 @@
     height: 100%;
     border-radius: 18px;
     overflow: hidden;
+    transition: all   0.3s ease-out ;
+
 }
 
 .innerCarusel {
@@ -232,6 +227,7 @@
     background-color: white;
     border-radius: 18px;
     position: relative;
+    will-change: transform;
     transition: transform 0.5s ease-out;
 }
 
@@ -247,17 +243,22 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 12px;
+    background-image: url(https://bigfoto.name/uploads/posts/2022-02/1645639980_1-bigfoto-name-p-samie-uyutnie-doma-3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .innerItem2 {
     top: 150%;
     background-color: rgb(140, 0, 255);
+    background-image: url(https://domsbobrom.com/uploads/images/projects/Sintia/lk1630_06_draft01-1500x1072.jpg);
 }
 
 .innerItem3 {
     top: 250%;
     background-color: rgb(255, 0, 0);
-
+    background-image: url(https://newphoto.club/pics/uploads/posts/2023-03/1678767042_newphoto-club-p-krasivie-doma-v-zhizni-48.jpg);
 }
 
 .ImageBtn {
