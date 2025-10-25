@@ -18,6 +18,8 @@ function App() {
               <Route index element={<MainPage/>}></Route>
               <Route path='/Main' element={<Animationblox/>}></Route>
 
+
+
           </Route>
         </Routes>
       </BrowserRouter>
