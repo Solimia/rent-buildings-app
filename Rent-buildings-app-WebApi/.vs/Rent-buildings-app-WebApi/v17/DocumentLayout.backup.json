@@ -1,0 +1,236 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/Rent_House_db.mssql.somee.com/Rent_House_db/Rent_Building123_SQLLogin_1/SqlTable/dbo.Houses.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/Rent_House_db.mssql.somee.com/Rent_House_db/Rent_Building123_SQLLogin_1/SqlTable/dbo.Reviews.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\houserentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\houserentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\entities\\house.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\entities\\house.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\entities\\houseimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\entities\\houseimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABB41AC3-C955-4F1F-B140-EC3315D05D20}|Rent-buildings-app-WebApi\\Rent-buildings-app-WebApi.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\rent-buildings-app-webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABB41AC3-C955-4F1F-B140-EC3315D05D20}|Rent-buildings-app-WebApi\\Rent-buildings-app-WebApi.csproj|solutionrelative:rent-buildings-app-webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MASTER\\AppData\\Roaming\\Microsoft\\UserSecrets\\f9c87510-4438-4329-b0c3-bcf0be30ae04\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF82B018-4753-46CD-A4BE-45C18AC62403}|BuisnessLogic\\BuisnessLogic.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\buisnesslogic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF82B018-4753-46CD-A4BE-45C18AC62403}|BuisnessLogic\\BuisnessLogic.csproj|solutionrelative:buisnesslogic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|c:\\users\\master\\desktop\\backend\\rent-buildings-app-webapi\\dataaccess\\migrations\\20251025174312_addinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1563D606-5C5C-499D-B8DF-6377207229EC}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\migrations\\20251025174312_addinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Reviews.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/Rent_House_db.mssql.somee.com/Rent_House_db/Rent_Building123_SQLLogin_1/SqlTable/dbo.Reviews.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/Rent_House_db.mssql.somee.com/Rent_House_db/Rent_Building123_SQLLogin_1/SqlTable/dbo.Reviews.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-25T18:01:50.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Houses.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/Rent_House_db.mssql.somee.com/Rent_House_db/Rent_Building123_SQLLogin_1/SqlTable/dbo.Houses.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/Rent_House_db.mssql.somee.com/Rent_House_db/Rent_Building123_SQLLogin_1/SqlTable/dbo.Houses.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-25T17:59:30.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20251025174312_AddInit.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Migrations\\20251025174312_AddInit.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Migrations\\20251025174312_AddInit.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Migrations\\20251025174312_AddInit.cs",
+              "RelativeToolTip": "DataAccess\\Migrations\\20251025174312_AddInit.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwD8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T17:43:13.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "DataAccess\\Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwHAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T17:21:00.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HouseRentDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\HouseRentDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\HouseRentDbContext.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\HouseRentDbContext.cs",
+              "RelativeToolTip": "DataAccess\\Data\\HouseRentDbContext.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAADwvyoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T16:16:12.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HouseImage.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\HouseImage.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\Entities\\HouseImage.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\HouseImage.cs",
+              "RelativeToolTip": "DataAccess\\Data\\Entities\\HouseImage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T16:07:54.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "House.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\House.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\Entities\\House.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\House.cs",
+              "RelativeToolTip": "DataAccess\\Data\\Entities\\House.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T15:49:22.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\Entities\\Review.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\Review.cs",
+              "RelativeToolTip": "DataAccess\\Data\\Entities\\Review.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwBIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T16:14:44.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\User.cs",
+              "RelativeToolTip": "DataAccess\\Data\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T16:08:44.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\Booking.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\Entities\\Booking.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\DataAccess\\Data\\Entities\\Booking.cs",
+              "RelativeToolTip": "DataAccess\\Data\\Entities\\Booking.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T16:33:35.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\Rent-buildings-app-WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Rent-buildings-app-WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\Rent-buildings-app-WebApi\\Program.cs",
+              "RelativeToolTip": "Rent-buildings-app-WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T17:29:55.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\MASTER\\AppData\\Roaming\\Microsoft\\UserSecrets\\f9c87510-4438-4329-b0c3-bcf0be30ae04\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\f9c87510-4438-4329-b0c3-bcf0be30ae04\\secrets.json",
+              "ToolTip": "C:\\Users\\MASTER\\AppData\\Roaming\\Microsoft\\UserSecrets\\f9c87510-4438-4329-b0c3-bcf0be30ae04\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\f9c87510-4438-4329-b0c3-bcf0be30ae04\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-25T16:27:35.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\BuisnessLogic\\Class1.cs",
+              "RelativeDocumentMoniker": "BuisnessLogic\\Class1.cs",
+              "ToolTip": "C:\\Users\\MASTER\\Desktop\\BackEnd\\Rent-buildings-app-WebApi\\BuisnessLogic\\Class1.cs",
+              "RelativeToolTip": "BuisnessLogic\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T15:49:02.831Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

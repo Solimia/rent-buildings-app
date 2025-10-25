@@ -1,0 +1,14 @@
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Users\MASTER\Desktop\Rent-buildings-app-WebApi\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
