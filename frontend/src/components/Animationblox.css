@@ -1,22 +1,292 @@
-.Card-class
-{
-    width: 200px;
-    height: 300px;
-    background-color: red;
-    border-radius:  10px;
+.Card-class {
+    width: 280px;
+    height: 370px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
     transform-origin: left top;
-    
-    transition: all   0.1s ease-out ;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.1s ease-out;
+    margin: 0;
+
 }
-.wrapper
-{
+
+.Card-classRight {
+    width: 280px;
+    height: 370px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+    transform-origin: right top;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.1s ease-out;
+    margin: 0;
+}
+
+.FirstCol {
     width: 100%;
     height: min-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+}
 
+.SecondCol {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    /* background-color: rgb(3, 36, 255); */
+}
+
+.Animationblox-Container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+    height: 3000px;
+}
+
+
+
+.inner-card {
+    width: 100%;
+    height: 40%;
+    background-image: url(https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgb(200, 200, 200);
+    border-radius: 12px 12px 0 0;
+    transform-origin: left top;
+}
+
+.inner-cardT {
+    width: 100%;
+    flex: 1;
+    /* background-color: rgb(175, 11, 11); */
+    padding-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.inner-cardTitle {
+    width: 100%;
+    height: min-content;
+    /* background-color: rgb(222, 185, 185); */
+
+
+    border-bottom: 2px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding-bottom: 7%;
+}
+
+.inner-1Row {
+    width: 100%;
+    height: min-content;
+    /* margin: auto; */
+    /* background-color: rgb(183, 4, 4); */
+    /* border-radius: 12px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.IconSale {
+    width: min-content;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: min-content;
+    background-color: #faf2e7;
+    color: #a18031;
+    font-size: 14px;
+    height: 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 6px; */
+}
+
+.inner-2Row p {
+
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.805);
+}
+
+.inner-3Row {
+    display: flex;
+    width: 100%;
+    height: min-content;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+
+.inner-3Row p {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.489);
+    /* margin-right: 5px; */
+    /* font-weight: 500; */
+
+}
+
+.MapIcon {
+    width: 16px;
+    height: 16px;
+    background-image: url(../assets/pin.png);
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+}
+
+.inner-cardInfo {
+    /* background-color: red; */
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 10px;
+}
+
+.Info-1Box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+    font-size: 12px;
+}
+
+.Info-Icon {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+}
 
-    gap: 20px;
+.RulerIcon {
+    width: 17px;
+    height: 17px;
+    background-image: url(../assets/ruler.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.BedIcon {
+    width: 17px;
+    height: 17px;
+    background-image: url(../assets/bed.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+}
+
+.ShowerIcon {
+    width: 17px;
+    height: 17px;
+    background-image: url(../assets/shower.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+}
+
+.inner-cardOwner {
+    /* flex: 1; */
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.Owner-Img {
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Owner-Name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2px;
+}
+
+.Owner-Name p {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.Owner-Name span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #79739a;
+}
+
+.Div23 {
+    width: 100%;
+    height: 1500px;
 }

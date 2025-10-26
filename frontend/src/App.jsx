@@ -20,6 +20,8 @@ function App() {
               <Route path='/Main' element={<Animationblox/>}></Route>
               <Route path='/page' element={<Page/>}></Route>
 
+
+
           </Route>
         </Routes>
       </BrowserRouter>
