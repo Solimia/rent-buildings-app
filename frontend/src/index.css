@@ -1,19 +1,38 @@
-body,html{
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-p{
+
+p {
   margin: 0;
   padding: 0;
 }
-body{
-  background-color: #192a34;
+
+body {
+  background-color: #ffffff;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Underground';
+  src: url('./assets/fonts/P22Underground-Medium.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'UndergroundHeavy';
+  src: url(./assets/fonts/P22Underground-Heavy.otf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
 }
