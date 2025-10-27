@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import "./MainPage.css"
+import ButtonH from './HoverButton';
+import Button from './HoverButton';
 export default function MainPage() {
 
   const CaruselRef = useRef();
@@ -42,9 +44,9 @@ export default function MainPage() {
       const CardRotateR = CardRotateRef.current;
       if (CardRotateR) {
         CardRotateR.style.transform = `rotate(${-100 + scrollFraction * 100}deg)
-         scale(${0 + scrollFraction })`;
+         scale(${0 + scrollFraction})`;
         CardRotateR.style.opacity = 0.25 + scrollFraction3 * 3;
-       
+
       }
     }
 
@@ -91,6 +93,8 @@ export default function MainPage() {
         <div className='Layer2'></div>
         <div className='Layer3'></div>
         <div className='Layer4'><p>GLASSHAVEN</p></div>
+        <Button></Button>
+
       </div>
       <div className='FirstCol2'>
         <div ref={RowRef} className="FirstRow">
@@ -147,7 +151,7 @@ export default function MainPage() {
         </div>
 
       </div>
-      
+
     </div>
   )
 }

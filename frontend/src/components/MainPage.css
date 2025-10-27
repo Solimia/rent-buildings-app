@@ -34,7 +34,7 @@
     inset: 0;
     bottom: -55%;
     position: absolute;
-    background-image: url(../assets/bottomgood2.png);
+    background-image: url(..//assets/img/botomgood.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: start center;
@@ -48,7 +48,7 @@
     inset: 0;
     top: 10%;
     position: absolute;
-    background-image: url(../assets/HouseEnd1.png);
+    background-image: url(../assets/img/HouseEnd1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: start center;
@@ -61,7 +61,7 @@
 .Layer3 {
     inset: 0;
     position: absolute;
-    background-image: url(../assets/AIHouse.png);
+    background-image: url(../assets/img/AIHouse.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: start center;

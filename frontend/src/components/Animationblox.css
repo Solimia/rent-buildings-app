@@ -12,7 +12,7 @@
 
     transition: all 0.1s ease-out;
     margin: 0;
-
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
 }
 
 .Card-classRight {
@@ -26,6 +26,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Underground';
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
 
     transition: all 0.1s ease-out;
     margin: 0;
@@ -57,9 +59,9 @@
     justify-content: center;
     align-items: start;
     gap: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Underground';
     font-size: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
     /* background-color: rgb(3, 36, 255); */
 }
 
@@ -127,9 +129,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Underground';
+    font-family: 'UndergroundHeavy';
     font-size: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: center;
 }
 
@@ -143,16 +146,18 @@
     color: #a18031;
     font-size: 14px;
     height: 30px;
-    font-weight: bold;
+    /* font-weight: bold; */
     border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: normal;
     /* border-radius: 6px; */
 }
 
 .inner-2Row p {
 
+    font-family: 'UndergroundHeavy';
     font-size: 14px;
     color: rgba(0, 0, 0, 0.805);
 }
@@ -164,20 +169,34 @@
     justify-content: start;
     align-items: center;
     gap: 5px;
+    /* background-color: rebeccapurple; */
 }
 
-.inner-3Row p {
+
+.AddressText {
+    /* background-color: rgb(255, 8, 0); */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.489);
-    /* margin-right: 5px; */
-    /* font-weight: 500; */
+    color: #79739a;
 
+}
+
+.AddressText p {
+    height: 10px;
+    line-height: 10px;
+    margin-top: 3px;
 }
 
 .MapIcon {
     width: 16px;
     height: 16px;
-    background-image: url(../assets/pin.png);
+    background-image: url(../assets/img/gps.png);
     background-size: cover;
     background-position: center center;
     opacity: 0.5;
@@ -215,7 +234,7 @@
 .RulerIcon {
     width: 17px;
     height: 17px;
-    background-image: url(../assets/ruler.png);
+    background-image: url(../assets/img/ruler.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -225,7 +244,7 @@
 .BedIcon {
     width: 17px;
     height: 17px;
-    background-image: url(../assets/bed.png);
+    background-image: url(../assets/img/bed.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -236,7 +255,7 @@
 .ShowerIcon {
     width: 17px;
     height: 17px;
-    background-image: url(../assets/shower.png);
+    background-image: url(../assets/img/shower.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -247,8 +266,9 @@
 .inner-cardOwner {
     /* flex: 1; */
     /* background-color: rebeccapurple; */
+    margin-top: 5px;
     width: 100%;
-    height: 100%;
+    height: min-content;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -277,16 +297,32 @@
 
 .Owner-Name p {
     font-size: 17px;
-    font-weight: bold;
+    /* font-weight: bold; */
+
 }
 
 .Owner-Name span {
     font-size: 13px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #79739a;
 }
 
 .Div23 {
     width: 100%;
     height: 1500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.SpanNight {
+    font-size: 14px;
+    font-weight: normal;
+    color: #79739a;
+
+}
+
+.SpanText {
+    font-size: 14px;
+    font-weight: normal;
+    color: #79739a;
+
 }

@@ -8,7 +8,7 @@ export default function MotionDivCent() {
                 className='Card-class'
                 initial={{ scale: 1, x: 0, y: 100 }}
                 whileInView={{ scale: 1, x: 0, y: 0, transition: { duration: 0.3 } }}
-                viewport={{ once: true, amount: .5}}
+                viewport={{ once: true, amount: .5 }}
 
             >
                 <div className='inner-card'>
@@ -18,7 +18,7 @@ export default function MotionDivCent() {
                     <div className='inner-cardTitle'>
                         <div className='inner-1Row'>
                             <div className='innerIn-1Row'>
-                                <p>$3,273,279</p>
+                                <p>$437<span className='SpanNight'>/night</span></p>
                             </div>
                             <div className='IconSale'>
                                 <p>For sale</p>
@@ -29,7 +29,10 @@ export default function MotionDivCent() {
                         </div>
                         <div className='inner-3Row'>
                             <div className='MapIcon'></div>
-                            <p>29 Terrace Rd, BH2 5EL</p>
+                            <div className='AddressText'>
+                                <p>29 Terrace Rd, BH2 5EL</p>
+
+                            </div>
                         </div>
 
                     </div>
@@ -37,19 +40,19 @@ export default function MotionDivCent() {
                         <div className='Info-1Box'>
                             <div className='Info-Icon'>
                                 <div className='RulerIcon'></div>
-                                <p>1634 <span>sqft</span></p>
+                                <p>1634 <span className='SpanText'>sqft</span></p>
                             </div>
 
                             <div className='Info-Icon'>
                                 <div className='BedIcon'></div>
 
-                                <p>5 Beds</p>
+                               <p>5 <span className='SpanText'>bed.</span></p>
                             </div>
 
                             <div className='Info-Icon'>
                                 <div className='ShowerIcon'></div>
 
-                                <p>5 Beds</p>
+                                <p>3 <span className='SpanText'>bath.</span></p>
                             </div>
 
                         </div>
