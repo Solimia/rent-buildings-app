@@ -47,8 +47,8 @@
         public List<Review> Reviews { get; set; } = new List<Review>();
 
         // Власник
-        public string OwnerId { get; set; }
-        public User Owner { get; set; }
+        public string? OwnerId { get; set; }
+        public User? Owner { get; set; }
 
         // Той, хто зняв будинок (орендар)
         public string? TenantId { get; set; }

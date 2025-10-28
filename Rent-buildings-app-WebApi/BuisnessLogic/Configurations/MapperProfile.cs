@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BuisnessLogic.DTO_s;
+using BuisnessLogic.DTO_s.HouseDto;
 using BuisnessLogic.DTO_s.HouseDTO;
 using DataAccess.Data.Entities;
 using System;
@@ -15,9 +16,16 @@ namespace BuisnessLogic.Configurations
         public MapperProfile()
         {
             CreateMap<House, HouseDto>()
-                .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.Owner.Id))
-                .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.Owner.Id))
-                .ForMember(dest => dest.PricePerNight, opt => opt.MapFrom(src => src.PricePerNight));
+                .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.OwnerId));
+            //.ForMember(dest => dest.OwnerName, opt => opt.MapFrom(src => src.Owner.UserName)) потім як з'явиться UserName
+
+            CreateMap<CreateHouseDto, House>()
+                .ForMember(h => h.Images, opt => opt.Ignore())   // бо окремо додаються
+                .ForMember(h => h.OwnerId, opt => opt.Ignore());
+
+            CreateMap<UpdateHouseDto, House>()
+                .ForMember(h => h.Images, opt => opt.Ignore())   // бо окремо додаються
+                .ForMember(h => h.OwnerId, opt => opt.Ignore());
 
             // House → HouseDetailsDto
             CreateMap<House, HouseDetailsDto>()

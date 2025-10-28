@@ -4,8 +4,6 @@ namespace DataAccess.Data.Entities
 {
     public class User : IdentityUser,BaseEntity
     {
-        public string Name { get; set; }
-
         // Власні будинки
         public List<House> OwnedHouses { get; set; } = new List<House>();
 

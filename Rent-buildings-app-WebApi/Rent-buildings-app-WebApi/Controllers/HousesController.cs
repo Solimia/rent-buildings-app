@@ -1,4 +1,5 @@
 ﻿using BuisnessLogic.DTO_s;
+using BuisnessLogic.DTO_s.HouseDto;
 using BuisnessLogic.DTO_s.HouseDTO;
 using BuisnessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -34,7 +35,7 @@ namespace Rent_buildings_app_WebApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] HouseDto houseDto)
+        public async Task<IActionResult> Create([FromBody] CreateHouseDto houseDto)
         {
             if (houseDto == null)
                 return BadRequest();
@@ -44,7 +45,7 @@ namespace Rent_buildings_app_WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] HouseDto houseDto)
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateHouseDto houseDto)
         {
             if (houseDto == null || houseDto.Id != id)
                 return BadRequest();

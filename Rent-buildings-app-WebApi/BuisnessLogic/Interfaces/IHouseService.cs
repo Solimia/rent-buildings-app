@@ -1,4 +1,5 @@
 ﻿using BuisnessLogic.DTO_s;
+using BuisnessLogic.DTO_s.HouseDto;
 using BuisnessLogic.DTO_s.HouseDTO;
 
 namespace BuisnessLogic.Interfaces
@@ -7,8 +8,8 @@ namespace BuisnessLogic.Interfaces
     {
         Task<HouseDto> GetHouseByIdAsync(int id);
         Task<IEnumerable<HouseDto>> GetAllHousesAsync();
-        Task<HouseDto> CreateHouseAsync(HouseDto houseDto);
-        Task<HouseDto> UpdateHouseAsync(HouseDto houseDto);
+        Task<HouseDto> CreateHouseAsync(CreateHouseDto houseDto);
+        Task<HouseDto> UpdateHouseAsync(UpdateHouseDto houseDto);
         Task<bool> DeleteHouseAsync(int id);
 
         Task<IEnumerable<ReviewDto>> GetReviewsAsync(int houseId);
