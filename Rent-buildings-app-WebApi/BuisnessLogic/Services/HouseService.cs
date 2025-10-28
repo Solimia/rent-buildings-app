@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
 using BuisnessLogic.DTO_s;
+using BuisnessLogic.DTO_s.HouseDto;
 using BuisnessLogic.DTO_s.HouseDTO;
 using BuisnessLogic.Interfaces;
 using DataAccess.Data.Entities;
 using DataAccess.Repositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +25,13 @@ namespace BuisnessLogic.Services
             this.mapper = mapper;
         }
 
-        public async Task<HouseDto> CreateHouseAsync(HouseDto houseDto)
+        public async Task<HouseDto> CreateHouseAsync(CreateHouseDto houseDto)
         {
             var house = mapper.Map<House>(houseDto);
+            house.Rating = house.Reviews.Any()
+                ? house.Reviews.Average(r => r.Rating)
+                : 0;
+
             await houseRepository.AddAsync(house);
             return mapper.Map<HouseDto>(house);
         }
@@ -71,11 +77,25 @@ namespace BuisnessLogic.Services
             throw new NotImplementedException();
         }
 
-        public async Task<HouseDto> UpdateHouseAsync(HouseDto houseDto)
+        public async Task<HouseDto> UpdateHouseAsync(UpdateHouseDto houseDto)
         {
-            var house = mapper.Map<House>(houseDto);
-            await houseRepository.UpdateAsync(house);
-            return mapper.Map<HouseDto>(house);
+            var existingHouse = await houseRepository.GetByIdAsync(houseDto.Id);
+
+            // 2) якщо не знайдений – повертаємо null
+            if (existingHouse == null)
+                return null;
+
+            // 3) мапимо DTO поверх знайденого будинку (оновлюємо поля)
+            mapper.Map(houseDto, existingHouse);
+
+            // 4) зберігаємо оновлені дані
+            await houseRepository.UpdateAsync(existingHouse);
+
+            // 5) повертаємо DTO для відображення
+            return mapper.Map<HouseDto>(existingHouse);
         }
+
+
     }
+
 }

@@ -15,7 +15,7 @@ namespace DataAccess.Data.Entities
         public House House { get; set; }
 
         // Орендар
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
 
         // Дати оренди

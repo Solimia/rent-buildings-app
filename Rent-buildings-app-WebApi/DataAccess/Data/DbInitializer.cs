@@ -12,6 +12,7 @@ namespace DataAccess.Data
     {
         public static void SeedHouses(this ModelBuilder modelBuilder)
         {
+
             modelBuilder.Entity<House>().HasData(
                 new House
                 {
@@ -41,8 +42,8 @@ namespace DataAccess.Data
                     CheckInTime = new TimeSpan(14, 0, 0),
                     CheckOutTime = new TimeSpan(12, 0, 0),
                     Rating = 4.5,
-                    OwnerId = 1,
-                    TenantId = null
+                    //OwnerId = null,
+                    //TenantId = null
                 },
                 new House
                 {
@@ -62,7 +63,7 @@ namespace DataAccess.Data
                     PricePerNight = 70,
                     IsShortTermAvailable = true,
                     IsLongTermAvailable = false,
-                    OwnerId = 2
+                    //OwnerId = null
                 }
             );
         }
@@ -70,44 +71,44 @@ namespace DataAccess.Data
         public static void SeedHouseImages(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<HouseImage>().HasData(
-                new HouseImage { Id = 1, HouseId = 1, ImageUrl = "https://example.com/house1-1.jpg" },
-                new HouseImage { Id = 2, HouseId = 1, ImageUrl = "https://example.com/house1-2.jpg" },
-                new HouseImage { Id = 3, HouseId = 2, ImageUrl = "https://example.com/house2-1.jpg" }
+                new HouseImage { Id = 1, HouseId = 1, ImageUrl = "https://filesblog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg" },
+                new HouseImage { Id = 2, HouseId = 1, ImageUrl = "https://filesblog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg" },
+                new HouseImage { Id = 3, HouseId = 2, ImageUrl = "https://filesblog.technavio.org/wp-content/uploads/2018/12/Online-House-Rental-Sites.jpg" }
             );
         }
 
-        public static void SeedReviews(this ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Review>().HasData(
-                new Review { Id = 1, HouseId = 1, UserId = 2, Comment = "Great place!", Rating = 5 },
-                new Review { Id = 2, HouseId = 1, UserId = 3, Comment = "Very cozy.", Rating = 4 }
-            );
-        }
+        //public static void SeedReviews(this ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Review>().HasData(
+        //        new Review { Id = 1, HouseId = 1, UserId = 2, Comment = "Great place!", Rating = 5 },
+        //        new Review { Id = 2, HouseId = 1, UserId = 3, Comment = "Very cozy.", Rating = 4 }
+        //    );
+        //}
 
-        public static void SeedBookings(this ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Booking>().HasData(
-                new Booking
-                {
-                    Id = 1,
-                    HouseId = 1,
-                    UserId = 3,
-                    StartDate = new DateTime(2025, 11, 1),
-                    EndDate = new DateTime(2025, 11, 5),
-                    IsLongTerm = false,
-                    TotalPrice = 200
-                },
-                new Booking
-                {
-                    Id = 2,
-                    HouseId = 2,
-                    UserId = 1,
-                    StartDate = new DateTime(2025, 12, 1),
-                    EndDate = new DateTime(2026, 2, 1),
-                    IsLongTerm = true,
-                    TotalPrice = 2100
-                }
-            );
-        }
+        //public static void SeedBookings(this ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Booking>().HasData(
+        //        new Booking
+        //        {
+        //            Id = 1,
+        //            HouseId = 1,
+        //            UserId = 3,
+        //            StartDate = new DateTime(2025, 11, 1),
+        //            EndDate = new DateTime(2025, 11, 5),
+        //            IsLongTerm = false,
+        //            TotalPrice = 200
+        //        },
+        //        new Booking
+        //        {
+        //            Id = 2,
+        //            HouseId = 2,
+        //            UserId = 1,
+        //            StartDate = new DateTime(2025, 12, 1),
+        //            EndDate = new DateTime(2026, 2, 1),
+        //            IsLongTerm = true,
+        //            TotalPrice = 2100
+        //        }
+        //    );
+        //}
     }
 }
