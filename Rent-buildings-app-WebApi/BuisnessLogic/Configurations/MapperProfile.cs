@@ -37,6 +37,11 @@ namespace BuisnessLogic.Configurations
                 opt => opt.MapFrom(src => src.Tenant != null ? src.Tenant.Id.ToString() : null));
 
 
+            CreateMap<CreateHouseDto, House>()
+                .ForMember(h => h.OwnerId, opt => opt.Ignore());
+
+            CreateMap<CategoryDto, Category>().ReverseMap();
+            CreateMap<CreateCategoryDto, Category>();
 
 
             // HouseImage → HouseImageDto
