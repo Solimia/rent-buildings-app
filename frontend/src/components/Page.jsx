@@ -21,32 +21,31 @@ export default function Page() {
   }, []);
 
   return (
-    <>
-      <div className="page">
-        <header className="top-line">
-          <div className="logo">
-            <img src="img/Home-logo.png" alt="Grow" />
-          </div>
+    <div className="home">
 
-          <nav className="main-menu">
-            <ul>
-              <li><a href="#">Main</a></li>
-              <li className="active"><span>Info</span></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+      {/* --- Розмите верхнє меню --- */}
+      <header className="navbar">
+        <div className="logo">ОрендаБудинків</div>
+        <nav className="nav-links">
+          <a href="#">Переглянути деталі</a>
+          <a href="#">Увійти</a>
+          <a href="#">Реєстрація</a>
+        </nav>
+      </header>
+      {/* --- Кінець меню --- */}
 
-          <a href="#" className="button button--top">Plant now</a>
-        </header>
-
-        <div className="header-content">
-          <div className="header-content__slide active">
-            <h1 className="letters">Homes</h1>
-            <div className="header-content__info">
-              <br />
-              <button className="button button--main">Plant a tree now</button>
-            </div>
-          </div>
+      <header className="hero">
+        <div className="overlay">
+          <h1 className="title">  </h1>
+          <p className="subtitle">
+            Знайди свій ідеальний дім для життя чи відпочинку
+          </p>
+          <button className="cta">Переглянути пропозиції</button>
+      <header className="hero">
+        <div className="overlay">
+          <h1 className="title">Houses for rent</h1>
+          <p className="subtitle">Comfort, style, and space — choose a home that feels like yours.</p>
+          <button className="cta">View listings</button>
         </div>
 
       </div>
@@ -60,3 +59,4 @@ export default function Page() {
     </>
   );
 }
+

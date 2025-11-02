@@ -35,6 +35,8 @@ namespace BuisnessLogic.DTO_s.HouseDTO
         public bool IsPetsAllowed { get; set; }
         public bool IsSmokingAllowed { get; set; }
         public TimeSpan CheckInTime { get; set; }
-        public TimeSpan CheckOutTime { get; set; } 
+        public TimeSpan CheckOutTime { get; set; }
+
+        public int? CategoryId { get; set; }
     }
 }

@@ -28,5 +28,4 @@ namespace DataAccess.Data.Entities
         // Загальна ціна
         public decimal TotalPrice { get; set; }
     }
-
 }

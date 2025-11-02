@@ -68,6 +68,16 @@ namespace DataAccess.Data
             );
         }
 
+        public static void SeedCategories(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>().HasData(
+                new Category { Id = 1, Name = "Apartment" },
+                new Category { Id = 2, Name = "House" },
+                new Category { Id = 3, Name = "Studio" },
+                new Category { Id = 4, Name = "Villa" },
+                new Category { Id = 5, Name = "Cabin" }
+            );
+        }
         public static void SeedHouseImages(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<HouseImage>().HasData(

@@ -54,6 +54,9 @@
         public string? TenantId { get; set; }
         public User? Tenant { get; set; }
 
+        public int? CategoryId { get; set; }  // nullable, щоб не вимагати відразу
+        public Category? Category { get; set; }
+
         // Фото
         public List<HouseImage> Images { get; set; } = new List<HouseImage>();
         public List<Booking> Bookings { get; set; } = new List<Booking>();// історія бронювань
