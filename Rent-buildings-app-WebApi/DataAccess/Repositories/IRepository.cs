@@ -5,8 +5,8 @@ namespace DataAccess.Repositories
     public interface IRepository<T> where T : class, BaseEntity
     {
         Task<IReadOnlyList<T>> GetAllAsync(
-            //int? pageNumber = null,
-            //int pageSize = 10
+            int? pageNumber = null,
+            int pageSize = 10
             );
         Task<T?> GetByIdAsync(int id);
         Task AddAsync(T entity);

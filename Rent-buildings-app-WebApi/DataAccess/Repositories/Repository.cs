@@ -1,5 +1,6 @@
 ﻿using DataAccess.Data;
 using DataAccess.Data.Entities;
+using DataAccess.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repositories
@@ -35,9 +36,14 @@ namespace DataAccess.Repositories
             }
         }
 
-        public async Task<IReadOnlyList<T>> GetAllAsync()
+        public async Task<IReadOnlyList<T>> GetAllAsync(int? pageNumber = null,
+            int pageSize = 10)
         {
             var query = dbSet.AsQueryable();
+
+            if (pageNumber != null)
+                query = await query.PaginateAsync(pageNumber.Value, pageSize);
+
             return await query.ToListAsync();
         }
 
