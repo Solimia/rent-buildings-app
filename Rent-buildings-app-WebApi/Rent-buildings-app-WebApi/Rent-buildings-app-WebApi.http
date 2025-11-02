@@ -1,0 +1,6 @@
+@Rent_buildings_app_WebApi_HostAddress = http://localhost:5278
+
+GET {{Rent_buildings_app_WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

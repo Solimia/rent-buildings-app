@@ -1,0 +1,425 @@
+.Card-class {
+    width: 280px;
+    height: 370px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+    transform-origin: left top;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.1s ease-out;
+    margin: 0;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.Card-classRight {
+    width: 280px;
+    height: 370px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+    transform-origin: right top;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Underground';
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05);
+
+    transition: all 0.1s ease-out;
+    margin: 0;
+}
+
+.FirstCol {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+}
+
+.SecondCol {
+    width: 100%;
+    height: min-content;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    font-family: 'Underground';
+    font-size: 20px;
+    /* font-weight: bold; */
+    /* background-color: rgb(3, 36, 255); */
+}
+
+
+
+
+.inner-card {
+    width: 100%;
+    height: 40%;
+    background-image: url(https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: rgb(200, 200, 200);
+    border-radius: 12px 12px 0 0;
+    transform-origin: left top;
+}
+
+.inner-cardT {
+    width: 100%;
+    flex: 1;
+    /* background-color: rgb(175, 11, 11); */
+    padding-top: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.inner-cardTitle {
+    width: 100%;
+    height: min-content;
+    /* background-color: rgb(222, 185, 185); */
+
+
+    border-bottom: 2px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding-bottom: 7%;
+}
+
+.inner-1Row {
+    width: 100%;
+    height: min-content;
+    /* margin: auto; */
+    /* background-color: rgb(183, 4, 4); */
+    /* border-radius: 12px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Underground';
+    font-family: 'UndergroundHeavy';
+    font-size: 20px;
+    /* font-weight: bold; */
+    text-align: center;
+}
+
+.IconSale {
+    width: min-content;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: min-content;
+    background-color: #faf2e7;
+    color: #a18031;
+    font-size: 14px;
+    height: 30px;
+    /* font-weight: bold; */
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    /* border-radius: 6px; */
+}
+
+.inner-2Row p {
+
+    font-family: 'UndergroundHeavy';
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.805);
+}
+
+.inner-3Row {
+    display: flex;
+    width: 100%;
+    height: min-content;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    /* background-color: rebeccapurple; */
+}
+
+
+.AddressText {
+    /* background-color: rgb(255, 8, 0); */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.489);
+    color: #79739a;
+
+}
+
+.AddressText p {
+    height: 10px;
+    line-height: 10px;
+    margin-top: 3px;
+}
+
+.MapIcon {
+    width: 16px;
+    height: 16px;
+    background-image: url(../assets/img/gps.png);
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+}
+
+.inner-cardInfo {
+    /* background-color: red; */
+    width: 100%;
+    height: min-content;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 10px;
+}
+
+.Info-1Box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+    font-size: 12px;
+}
+
+.Info-Icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.RulerIcon {
+    width: 17px;
+    height: 17px;
+    background-image: url(../assets/img/ruler.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.BedIcon {
+    width: 17px;
+    height: 17px;
+    background-image: url(../assets/img/bed.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+}
+
+.ShowerIcon {
+    width: 17px;
+    height: 17px;
+    background-image: url(../assets/img/shower.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+
+}
+
+.inner-cardOwner {
+    /* flex: 1; */
+    /* background-color: rebeccapurple; */
+    margin-top: 5px;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+
+.Owner-Img {
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.Owner-Name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2px;
+}
+
+.Owner-Name p {
+    font-size: 17px;
+    /* font-weight: bold; */
+
+}
+
+.Owner-Name span {
+    font-size: 13px;
+    /* font-weight: bold; */
+    color: #79739a;
+}
+
+.Div23 {
+    width: 100%;
+    height: 1500px;
+    background-color: rgb(255, 255, 255);
+}
+
+.SpanNight {
+    font-size: 14px;
+    font-weight: normal;
+    color: #79739a;
+
+}
+
+.SpanText {
+    font-size: 14px;
+    font-weight: normal;
+    color: #79739a;
+
+}
+
+.RowWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    min-height: 100vw;
+    /* background-color: red; */
+    gap: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: url(../assets/img/image.svg);
+    background-position: center center;
+    background-size: contain;
+}
+
+
+
+.Animationblox-Container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    /* width: 100%; */
+    height: 3000px;
+    width: min-content;
+    /* overflow: hidden; */
+}
+
+.SideBarFilterWrap {
+    display: flex;
+    z-index: 10;
+    width: min-content;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 255, 187); */
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+
+}
+
+:root {
+    --bg-color2: rgb(255, 255, 255);
+    --br-color: rgba(245, 239, 235, 0.4);;
+}
+
+[data-theme='dark'] {
+    --bg-color2: rgba(15, 9, 12, 0.56);
+    --br-color: rgba(60, 60, 60, 0.4);
+}
+
+.SideBarWrapItem {
+    width: min-content;
+    min-height: 100px;
+    height: 1000px;
+
+    background-color: var(--bg-color2);
+
+ 
+    box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.56);
+    display: flex;
+    gap: 15px;
+    border-radius: 40px;
+
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 0.5px solid var(--br-color);
+
+    backdrop-filter: blur(30px);
+
+
+}
+
+/* .SideBarWrapItem {
+    width: min-content;
+    min-height: 100px;
+    height: 1000px;
+
+
+
+ 
+    display: flex;
+    gap: 15px;
+    border-radius: 40px ;
+
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+   
+    backdrop-filter: blur(30px);
+    
+
+} */
+.dsada {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+}
