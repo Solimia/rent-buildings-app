@@ -6,5 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Data.Entities
 {
-    public interface BaseEntity { }
+    public abstract class BaseEntity {
+        public int Id { get; set; }
+    }
 }

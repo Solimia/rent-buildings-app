@@ -1,8 +1,9 @@
 ﻿using DataAccess.Data.Entities;
+using System.Linq.Expressions;
 
 namespace DataAccess.Repositories
 {
-    public interface IRepository<T> where T : class, BaseEntity
+    public interface IRepository<T> where T : BaseEntity
     {
         Task<IReadOnlyList<T>> GetAllAsync(
             int? pageNumber = null,
@@ -13,5 +14,7 @@ namespace DataAccess.Repositories
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
         Task DeleteAsync(T? id);
+        Task<IReadOnlyList<T>> GetAllWithIncludesAsync(params Expression<Func<T, object>>[] includes);
+        Task<T?> GetByIdWithIncludesAsync(int id, params Expression<Func<T, object>>[] includes);
     }
 }

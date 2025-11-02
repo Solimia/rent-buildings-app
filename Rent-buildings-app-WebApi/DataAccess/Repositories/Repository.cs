@@ -2,10 +2,11 @@
 using DataAccess.Data.Entities;
 using DataAccess.Helpers;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace DataAccess.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : class, BaseEntity
+    public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         internal HouseRentDbContext context;
         internal DbSet<T> dbSet;
@@ -57,5 +58,33 @@ namespace DataAccess.Repositories
             context.Entry(entity).State = EntityState.Modified;
             await context.SaveChangesAsync();
         }
+
+
+        public async Task<IReadOnlyList<T>> GetAllWithIncludesAsync(params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = dbSet;
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.ToListAsync();
+        }
+
+        public async Task<T?> GetByIdWithIncludesAsync(int id, params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = dbSet;
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return await query.FirstOrDefaultAsync(e => e.Id == id);
+        }
+
+
+
     }
 }
