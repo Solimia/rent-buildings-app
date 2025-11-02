@@ -17,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
               <Route index element={<MainPage/>}></Route>
+              <Route path='/page' element={<Page/>}></Route>
               <Route path='/Main' element={<Animationblox/>}></Route>
               <Route path='/page' element={<Page/>}></Route>
 
