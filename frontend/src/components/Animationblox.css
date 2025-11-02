@@ -65,16 +65,6 @@
     /* background-color: rgb(3, 36, 255); */
 }
 
-.Animationblox-Container {
-    display: flex;
-    flex-direction: column;
-    /* background-color: rebeccapurple; */
-    justify-content: start;
-    align-items: start;
-    gap: 20px;
-    width: 100%;
-    height: 3000px;
-}
 
 
 
@@ -325,4 +315,111 @@
     font-weight: normal;
     color: #79739a;
 
+}
+
+.RowWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    min-height: 100vw;
+    /* background-color: red; */
+    gap: 70px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: url(../assets/img/image.svg);
+    background-position: center center;
+    background-size: contain;
+}
+
+
+
+.Animationblox-Container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: rebeccapurple; */
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    /* width: 100%; */
+    height: 3000px;
+    width: min-content;
+    /* overflow: hidden; */
+}
+
+.SideBarFilterWrap {
+    display: flex;
+    z-index: 10;
+    width: min-content;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 255, 187); */
+    flex-direction: column;
+    gap: 20px;
+    background-color: transparent;
+
+}
+
+:root {
+    --bg-color2: rgb(255, 255, 255);
+    --br-color: rgba(245, 239, 235, 0.4);;
+}
+
+[data-theme='dark'] {
+    --bg-color2: rgba(15, 9, 12, 0.56);
+    --br-color: rgba(60, 60, 60, 0.4);
+}
+
+.SideBarWrapItem {
+    width: min-content;
+    min-height: 100px;
+    height: 1000px;
+
+    background-color: var(--bg-color2);
+
+ 
+    box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.56);
+    display: flex;
+    gap: 15px;
+    border-radius: 40px;
+
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 0.5px solid var(--br-color);
+
+    backdrop-filter: blur(30px);
+
+
+}
+
+/* .SideBarWrapItem {
+    width: min-content;
+    min-height: 100px;
+    height: 1000px;
+
+
+
+ 
+    display: flex;
+    gap: 15px;
+    border-radius: 40px ;
+
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+   
+    backdrop-filter: blur(30px);
+    
+
+} */
+.dsada {
+    width: 300px;
+    height: 300px;
+    background-color: red;
 }
