@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import "./MainPage.css"
 import ButtonH from './HoverButton';
 import Button from './HoverButton';
+import { motion } from 'framer-motion';
+
 export default function MainPage() {
 
   const CaruselRef = useRef();
@@ -84,6 +86,7 @@ export default function MainPage() {
     }, 3000);
     return () => clearInterval(interval);
   }, [ImageIndex]);
+  const text = "GLASSHAVEN"
 
   return (
     <div className='BackgroundPage'>
@@ -92,7 +95,33 @@ export default function MainPage() {
         <div className='Layer1'></div>
         <div className='Layer2'></div>
         <div className='Layer3'></div>
-        <div className='Layer4'><p>GLASSHAVEN</p></div>
+        <div className='Layer4'>{
+          text.split('').map((char, index) => {
+            return <motion.span className='mSpan2'
+              initial={{
+                opacity: 0,
+                filter: "blur(10px)",
+                y: -200, 
+              }}
+              whileInView={{
+                opacity: 1,
+                filter: "blur(0px)",
+                y: 0, 
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.12 * index
+              }}
+              viewport={{
+
+                once: true
+              }}
+            >
+              {char === " " ? '\u00A0' : char}
+            </motion.span>
+
+          })
+        }</div>
         <Button></Button>
 
       </div>

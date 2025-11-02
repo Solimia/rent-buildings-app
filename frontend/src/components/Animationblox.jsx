@@ -9,51 +9,80 @@ import MotionDivRight from './MotionDivRight'
 import FilterMenu from './FilterMenu.jsx'
 import FilterBlok from './FilterBlok.jsx'
 import FilterMenu2 from './FilterMenu2.jsx'
+import { filter } from 'framer-motion/client'
 export default function Animationblox() {
     const [theme, setTheme] = useState("light");
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
     }, [theme]);
-    // const RightRef = useRef();
-    // useEffect(() => {
-    //     const handleScroll2 = () => {
-
-    //         const maxScroll = document.body.scrollHeight - window.innerHeight;
-
-    //         console.log("maxScroll");
-    //         const scrollFraction = window.scrollY / 150;
-    //         const scrollFraction2 = window.scrollY / maxScroll / 2;
-    //         const scrollFraction3 = window.scrollY / maxScroll / 4;
-    //         console.log("scrollFraction", scrollFraction);
-    //         const RightR = RightRef.current;
-    //         if (RightR) {
-    //             RightR.style.transform = `rotate(${50 + ((scrollFraction * -50) < -50 ? -50 : (scrollFraction * -50))}deg) 
-    //             translateX(${-200 + scrollFraction * 200}px)`;
-
-
-
-    //         }
-    //     }
-
-    //     window.addEventListener("scroll", handleScroll2);
-
-
-    //     return () => {
-    //         window.addEventListener("scroll", handleScroll2);
-
-    //     }
-
-    // }, []);
+    const text = "Test Text"
     return (
         <>
-
+            {/* <button
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+                className='dsada'
+            ></button> */}
 
             <div className='Div23'>
-                dsada <button
-                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-               className='dsada'
-            ></button></div>
+                {
+                    text.split('').map((char, index) => {
+                        return <motion.span className='mSpan'
+                            initial={{
+                                opacity: 0,
+                                filter: "blur(10px)"
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                filter: "blur(0px)"
+                            }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.1 * index
+                            }}
+                            viewport={{
 
+                                once: true
+                            }}
+                        >
+                            {char === " " ? '\u00A0' : char}
+                        </motion.span>
+
+                    })
+
+                }
+                <div className='dLayer1'></div>
+                <div className='dLayer2'></div>
+                <div className='dLayer3'></div>
+
+            </div>
+            <div className='Div23'>
+                {
+                    text.split('').map((char, index) => {
+                        return <motion.span className='mSpan'
+                            initial={{
+                                opacity: 0,
+                                filter: "blur(10px)"
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                filter: "blur(0px)"
+                            }}
+                            transition={{
+                                duration: 1,
+                                delay: 0.1 * index
+                            }}
+                            viewport={{
+
+                                once: true
+                            }}
+                        >
+                            {char === " " ? '\u00A0' : char}
+                        </motion.span>
+
+                    })
+
+                }
+            </div>
             <div className="RowWrapper">
                 <div className='SideBarFilterWrap'>
                     <div className="SideBarWrapItem">
