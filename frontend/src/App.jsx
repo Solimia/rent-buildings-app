@@ -7,6 +7,7 @@ import Layout from './components/Layout'
 import MainPage from './components/MainPage'
 import Animationblox from './components/Animationblox'
 import Page from './components/Page'
+import Page2 from './components/page2'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
               <Route index element={<MainPage/>}></Route>
               <Route path='/Main' element={<Animationblox/>}></Route>
               <Route path='/page' element={<Page/>}></Route>
-
+              <Route path='/page2' element={<Page2/>}></Route>
 
 
           </Route>
