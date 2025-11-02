@@ -31,7 +31,7 @@
 }
 
 h3 {
-    font-family: 'Golos Text';
+    font-family: "Golos Text", sans-serif;
     font-size: 25px;
     color: var(--ft-color);
 
@@ -44,7 +44,7 @@ h3 {
     border: 1px solid var(--br-colo1r);
     background-color: var(--mbg-color1);
     border-radius: 30px;
-    font-family: 'Golos Text';
+    font-family: "Golos Text", sans-serif;
     padding-left: 20px;
     padding-right: 20px;
 
