@@ -16,7 +16,7 @@ export default function Header() {
     useEffect(() => {
         themechanger.setTheme(contheme);
         console.log(contheme)
-        document.documentElement.setAttribute("data-theme", contheme);
+        document.documentElement.dataset.theme = contheme;
     }, [contheme])
 
     function setThemes() {

@@ -41,7 +41,7 @@
     padding: 3px;
     display: flex;
     flex-direction: row;
-    gap: 2x;
+    
 
 }
 
@@ -87,7 +87,7 @@
 
     aspect-ratio: 1 / 1;
     /* width: 100%; */
-    background-color: red;
+    
     height: 100%;
     border-radius: 50%;
     background: url(https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611737.jpg?semt=ais_hybrid&w=740&q=80);

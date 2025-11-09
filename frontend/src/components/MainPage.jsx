@@ -15,7 +15,7 @@ export default function MainPage() {
   const { contheme, setconTheme } = useContext(CounterContext);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", contheme);
+    document.documentElement.dataset.theme = contheme;
   }, [contheme]);
 
   useEffect(() => {

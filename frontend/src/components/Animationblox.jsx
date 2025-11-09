@@ -16,7 +16,7 @@ export default function Animationblox() {
     const { contheme, setconTheme } = useContext(CounterContext);
 
     useEffect(() => {
-        document.documentElement.setAttribute("data-theme", contheme);
+        document.documentElement.dataset.theme = contheme;
     }, [contheme]);
     const text = "Test Text"
     return (

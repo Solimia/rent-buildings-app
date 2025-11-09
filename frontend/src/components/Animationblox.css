@@ -42,7 +42,7 @@
     align-items: start;
     width: 100%;
     min-height: 100vw;
-    background-color: rgba(0, 0, 0, 0.937);
+  
 
     gap: 30px;
     padding: 20px;
@@ -364,7 +364,7 @@
 .Div23 {
     width: 100%;
     min-height: 100vh;
-    background-color: rgb(0, 0, 0);
+
     color: white;
     font-family: 'UndergroundHeavy';
     display: flex;
