@@ -13,6 +13,7 @@ namespace DataAccess.Data
         public DbSet<HouseImage> HouseImages { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Booking> Bookings { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +22,7 @@ namespace DataAccess.Data
 
             modelBuilder.SeedHouses();
             modelBuilder.SeedHouseImages();
+            modelBuilder.SeedCategories();
             //modelBuilder.SeedReviews();
             //modelBuilder.SeedBookings();
 
@@ -76,11 +78,20 @@ namespace DataAccess.Data
 
 
             modelBuilder.Entity<House>()
-        .HasOne(h => h.Owner)
-        .WithMany(u => u.OwnedHouses)
-        .HasForeignKey(h => h.OwnerId)
-        .IsRequired(false)  // nullable FK
-        .OnDelete(DeleteBehavior.Restrict);
+                .HasOne(h => h.Owner)
+                .WithMany(u => u.OwnedHouses)
+                .HasForeignKey(h => h.OwnerId)
+                .IsRequired(false)  // nullable FK
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Category>(entity =>
+            {
+                entity.HasKey(g => g.Id);
+
+                entity.Property(g => g.Name)
+                    .IsRequired()
+                    .HasMaxLength(100);
+            });
 
             // House - Tenant
             modelBuilder.Entity<House>()

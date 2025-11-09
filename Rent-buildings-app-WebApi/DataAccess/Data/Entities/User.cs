@@ -2,7 +2,7 @@
 
 namespace DataAccess.Data.Entities
 {
-    public class User : IdentityUser,BaseEntity
+    public class User : IdentityUser
     {
         // Власні будинки
         public List<House> OwnedHouses { get; set; } = new List<House>();

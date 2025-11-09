@@ -46,15 +46,17 @@ namespace BuisnessLogic.Services
 
         public async Task<IEnumerable<HouseDto>> GetAllHousesAsync()
         {
-            var houses = await houseRepository.GetAllAsync();
+            var houses = await houseRepository.GetAllWithIncludesAsync(h => h.Category);
             return mapper.Map<IEnumerable<HouseDto>>(houses);
         }
 
         public async Task<HouseDto> GetHouseByIdAsync(int id)
         {
-            var house = await houseRepository.GetByIdAsync(id);
+            var house = await houseRepository.GetByIdWithIncludesAsync(id, h => h.Category);
             return mapper.Map<HouseDto>(house);
         }
+
+
 
         public async Task<IEnumerable<HouseImageDto>> GetImagesAsync(int houseId)
         {
@@ -77,24 +79,97 @@ namespace BuisnessLogic.Services
             throw new NotImplementedException();
         }
 
-        public async Task<HouseDto> UpdateHouseAsync(UpdateHouseDto houseDto)
+        public async Task<House> UpdateHouseAsync(UpdateHouseDto houseDto)
         {
-            var existingHouse = await houseRepository.GetByIdAsync(houseDto.Id);
+            var entity = await houseRepository.GetByIdAsync(houseDto.Id);
+            if (entity == null) throw new Exception("House not found");
 
-            // 2) якщо не знайдений – повертаємо null
-            if (existingHouse == null)
-                return null;
+            UpdateHouseProperties(entity, houseDto);
 
-            // 3) мапимо DTO поверх знайденого будинку (оновлюємо поля)
-            mapper.Map(houseDto, existingHouse);
+            await houseRepository.UpdateAsync(entity);
 
-            // 4) зберігаємо оновлені дані
-            await houseRepository.UpdateAsync(existingHouse);
-
-            // 5) повертаємо DTO для відображення
-            return mapper.Map<HouseDto>(existingHouse);
+            return entity; // Повертаємо оновлений будинок
         }
 
+
+
+        private void UpdateHouseProperties(House entity, UpdateHouseDto houseDto)
+        {
+            if (houseDto.Title != null)
+                entity.Title = houseDto.Title;
+
+            if (houseDto.Description != null)
+                entity.Description = houseDto.Description;
+
+            if (houseDto.Address != null)
+                entity.Address = houseDto.Address;
+
+            if (houseDto.City != null)
+                entity.City = houseDto.City;
+
+            if (houseDto.Country != null)
+                entity.Country = houseDto.Country;
+
+            if (houseDto.Rooms.HasValue)
+                entity.Rooms = houseDto.Rooms.Value;
+
+            if (houseDto.MaxGuests.HasValue)
+                entity.MaxGuests = houseDto.MaxGuests.Value;
+
+            if (houseDto.Area.HasValue)
+                entity.Area = houseDto.Area.Value;
+
+            if (houseDto.HasWifi.HasValue)
+                entity.HasWifi = houseDto.HasWifi.Value;
+
+            if (houseDto.HasParking.HasValue)
+                entity.HasParking = houseDto.HasParking.Value;
+
+            if (houseDto.HasAirConditioning.HasValue)
+                entity.HasAirConditioning = houseDto.HasAirConditioning.Value;
+
+            if (houseDto.HasPool.HasValue)
+                entity.HasPool = houseDto.HasPool.Value;
+
+            if (houseDto.PricePerNight.HasValue)
+                entity.PricePerNight = houseDto.PricePerNight.Value;
+
+            if (houseDto.IsShortTermAvailable.HasValue)
+                entity.IsShortTermAvailable = houseDto.IsShortTermAvailable.Value;
+
+            if (houseDto.IsLongTermAvailable.HasValue)
+                entity.IsLongTermAvailable = houseDto.IsLongTermAvailable.Value;
+
+            if (houseDto.PricePerMonth.HasValue)
+                entity.PricePerMonth = houseDto.PricePerMonth.Value;
+
+            if (houseDto.DepositAmount.HasValue)
+                entity.DepositAmount = houseDto.DepositAmount.Value;
+
+            if (houseDto.MinMonths.HasValue)
+                entity.MinMonths = houseDto.MinMonths.Value;
+
+            if (houseDto.UtilitiesIncluded.HasValue)
+                entity.UtilitiesIncluded = houseDto.UtilitiesIncluded.Value;
+
+            if (houseDto.UtilitiesDescription != null)
+                entity.UtilitiesDescription = houseDto.UtilitiesDescription;
+
+            if (houseDto.IsPetsAllowed.HasValue)
+                entity.IsPetsAllowed = houseDto.IsPetsAllowed.Value;
+
+            if (houseDto.IsSmokingAllowed.HasValue)
+                entity.IsSmokingAllowed = houseDto.IsSmokingAllowed.Value;
+
+            if (houseDto.CheckInTime.HasValue)
+                entity.CheckInTime = houseDto.CheckInTime.Value;
+
+            if (houseDto.CheckOutTime.HasValue)
+                entity.CheckOutTime = houseDto.CheckOutTime.Value;
+
+            if (houseDto.CategoryId.HasValue)
+                entity.CategoryId = houseDto.CategoryId.Value;
+        }
 
     }
 

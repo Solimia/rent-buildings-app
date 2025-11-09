@@ -16,7 +16,8 @@ namespace BuisnessLogic.Configurations
         public MapperProfile()
         {
             CreateMap<House, HouseDto>()
-                .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.OwnerId));
+                .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.OwnerId))
+            .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
             //.ForMember(dest => dest.OwnerName, opt => opt.MapFrom(src => src.Owner.UserName)) потім як з'явиться UserName
 
             CreateMap<CreateHouseDto, House>()
@@ -37,6 +38,11 @@ namespace BuisnessLogic.Configurations
                 opt => opt.MapFrom(src => src.Tenant != null ? src.Tenant.Id.ToString() : null));
 
 
+            CreateMap<CreateHouseDto, House>()
+                .ForMember(h => h.OwnerId, opt => opt.Ignore());
+
+            CreateMap<CategoryDto, Category>().ReverseMap();
+            CreateMap<CreateCategoryDto, Category>();
 
 
             // HouseImage → HouseImageDto
