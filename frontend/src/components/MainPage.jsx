@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import "./MainPage.css"
-import ButtonH from './HoverButton';
-import Button from './HoverButton';
 import { motion } from 'framer-motion';
 import CardMove from './CardMove';
 import { CounterContext } from '../context/counter_context';
@@ -10,7 +8,6 @@ export default function MainPage() {
 
   const CaruselRef = useRef();
   const RowRef = useRef();
-  const ImageRef = useRef();
   const CardRotateRef = useRef();
   const { contheme } = useContext(CounterContext);
 
@@ -45,7 +42,6 @@ export default function MainPage() {
       if (rowR) {
         rowR.style.opacity = 0.25 + scrollFraction2 * 3;
       }
-      const ImageR = ImageRef.current;
       const CardRotateR = CardRotateRef.current;
       if (CardRotateR) {
         CardRotateR.style.transform = `rotate(${-100 + scrollFraction * 100}deg)
@@ -94,7 +90,7 @@ export default function MainPage() {
   return (
     <div className='BackgroundPage'>
 
-      <div ref={ImageRef} className='FirstCol'>
+      <div className='FirstCol'>
         <div className='Layer1'></div>
         <div className='Layer2'></div>
         <div className='Layer3'></div>

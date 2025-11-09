@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import React from 'react'
 import "./Animationblox.css"
 export default function MotionDiv() {

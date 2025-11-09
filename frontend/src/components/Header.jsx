@@ -1,10 +1,9 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import "./Header.css"
 import sunD from '../assets/img/sun.png';
 import nightD from '../assets/img/nightD.png';
 import Icon from '../assets/img/icon.png';
 import IconD from '../assets/img/iconD.png';
-import { setStyle } from 'framer-motion';
 import { themechanger } from '../services/themech.service';
 import { CounterContext } from '../context/counter_context';
 export default function Header() {
@@ -81,7 +80,7 @@ export default function Header() {
                                     <p>Settings</p>
 
                                 </div>
-                                <div className={contheme !== Light ? 'settingIcon' : 'settingIcon1'}></div>
+                                <div className={contheme === Light ? 'settingIcon1' : 'settingIcon'}></div>
 
                             </div>
                             <button onClick={() => setThemes()} className='CInner'>
@@ -103,7 +102,7 @@ export default function Header() {
                                     <p>Exit</p>
 
                                 </div>
-                                <div className={contheme !== Light ? 'LogIcon' : 'LogIcon1'}></div>
+                                <div className={contheme === Light ? 'LogIcon1' : 'LogIcon'}></div>
                             </div>
                         </div>
 
