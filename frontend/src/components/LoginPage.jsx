@@ -68,7 +68,7 @@ export default function LoginPage() {
                     <span>or use your email password</span>
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
-                    <a href="#">Forget Your Password?</a>
+                    <a href="https://tenor.com/uk/view/кот-смеётся-ржёт-кот-смеётся-кот-смеётся-с-пальцем-gif-16106940659961028099">Forget Your Password?</a>
                     <button type="button">Sign In</button>
                 </form>
             </div>
