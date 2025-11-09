@@ -34,29 +34,24 @@ export default function Page() {
       </header>
       {/* --- Кінець меню --- */}
 
-      <header className="hero">
-        <div className="overlay">
-          <h1 className="title">  </h1>
-          <p className="subtitle">
-            Знайди свій ідеальний дім для життя чи відпочинку
-          </p>
-          <button className="cta">Переглянути пропозиції</button>
+      {/* --- Головний хедер (герой) --- */}
       <header className="hero">
         <div className="overlay">
           <h1 className="title">Houses for rent</h1>
-          <p className="subtitle">Comfort, style, and space — choose a home that feels like yours.</p>
+          <p className="subtitle">
+            Comfort, style, and space — choose a home that feels like yours.
+          </p>
           <button className="cta">View listings</button>
         </div>
+      </header>
+      {/* --- Кінець героя --- */}
 
+      <div className="FirstCol">
+        <div className="Layer1"></div>
+        <div className="Layer2"></div>
+        <div className="Layer3"></div>
       </div>
-      <div className='FirstCol'>
-        <div className='Layer1'></div>
-        <div className='Layer2'></div>
-        <div className='Layer3'></div>
 
-      </div>
-
-    </>
+    </div>
   );
 }
-

@@ -23,11 +23,6 @@ function App() {
             <Route path='/page' element={<Page />}></Route>
             <Route path='/page2' element={<Page2 />}></Route>
             <Route path='/loginPage' element={<LoginPage />}></Route>
-              <Route index element={<MainPage/>}></Route>
-              <Route path='/page' element={<Page/>}></Route>
-              <Route path='/Main' element={<Animationblox/>}></Route>
-              <Route path='/page' element={<Page/>}></Route>
-              <Route path='/page2' element={<Page2/>}></Route>
 
 
           </Route>
