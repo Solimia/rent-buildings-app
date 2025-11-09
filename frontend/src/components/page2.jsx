@@ -11,11 +11,18 @@ export default function App() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    function randomNum(max, min) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+    // 🔐 Безпечний генератор псевдовипадкових чисел
+    function secureRandom() {
+      const array = new Uint32Array(1);
+      crypto.getRandomValues(array);
+      return array[0] / (0xffffffff + 1); // результат у діапазоні [0, 1)
     }
 
-    // 🌧️ Створюємо дощ як closure, без this
+    function randomNum(max, min) {
+      return Math.floor(secureRandom() * (max - min + 1)) + min;
+    }
+
+    // 🌧️ Створюємо дощ без this
     function createRainDrop(x, y, endy, velocity, opacity) {
       let posY = y;
 
@@ -37,14 +44,14 @@ export default function App() {
       return { update };
     }
 
-    // Створення масиву дощу
+    // 🌧️ Створення масиву дощу
     const rainArray = [];
     for (let i = 0; i < 140; i++) {
-      const rainXLocation = Math.floor(Math.random() * window.innerWidth) + 1;
-      const rainYLocation = Math.random() * -500;
+      const rainXLocation = randomNum(window.innerWidth, 1);
+      const rainYLocation = secureRandom() * -500;
       const randomRainHeight = randomNum(10, 2);
-      const randomSpeed = Math.random() * (20 - 0.2) + 0.2;
-      const randomOpacity = Math.random() * 0.55;
+      const randomSpeed = secureRandom() * (20 - 0.2) + 0.2;
+      const randomOpacity = secureRandom() * 0.55;
 
       rainArray.push(
         createRainDrop(
@@ -57,21 +64,18 @@ export default function App() {
       );
     }
 
-    // Анімація дощу
-// Анімація дощу
-function animateRain() {
-  requestAnimationFrame(animateRain);
-  c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+    // 🌧️ Анімація дощу
+    function animateRain() {
+      requestAnimationFrame(animateRain);
+      c.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-  // замість rainArray.forEach((r) => r.update());
-  for (const r of rainArray) {
-    r.update();
-  }
-}
-animateRain();
+      for (const r of rainArray) {
+        r.update();
+      }
+    }
+    animateRain();
 
-
-    // 🎥 Рух при русі миші
+    // 🎥 Рух при миші
     const handleMouseMove = (e) => {
       document.documentElement.style.setProperty(
         "--move-x",
@@ -88,12 +92,13 @@ animateRain();
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const layers = containerRef.current?.querySelectorAll(".layers__item");
-      layers?.forEach((layer, i) => {
+
+      for (const [i, layer] of Array.from(layers || []).entries()) {
         const depth = (i + 1) * 20;
         layer.style.transform = `translateY(${scrollY / depth}px) translateZ(${
           (i - 2) * 100
         }px) scale(${1 - i * 0.05})`;
-      });
+      }
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -104,7 +109,7 @@ animateRain();
   }, []);
 
   return (
-    <section className="layers" style={{width:"100vw"}}>
+    <section className="layers" style={{ width: "100vw" }}>
       <div
         className="logo"
         style={{ backgroundImage: "url(../assets/img/Home-logo.png)" }}
