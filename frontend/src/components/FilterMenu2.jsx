@@ -21,7 +21,7 @@ export default function FilterMenu2({ Title }) {
     }, [currentIndex]);
 
     return (
-        <label className="label-level">
+        <label className="label-level1">
             <p>{Title}</p>
             <div className="background-group-div">
                 <div className="button-group">
