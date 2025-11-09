@@ -12,13 +12,45 @@ export default function LoginPage() {
             {/* Sign Up Form */}
             <div className="form-container sign-up">
                 <form>
-                    <h1>Create Account</h1>
+                    <h1 className="h1">Create Account</h1>
                     <div className="social-icons">
-                        <a href="#" className="icon"><i className="fa-brands fa-google-plus-g"></i></a>
-                        <a href="#" className="icon"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" className="icon"><i className="fa-brands fa-github"></i></a>
-                        <a href="#" className="icon"><i className="fa-brands fa-linkedin-in"></i></a>
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="icon"
+                        >
+                            <img src="/components/assets/img/facebook.png" alt="Facebook" />
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="icon"
+                        >
+                            <img src="./components/assets/img/instagram.png" alt="Instagram" />
+                        </a>
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="icon"
+                        >
+                            <img src="/assets/img/social/github.png" alt="GitHub" />
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="icon"
+                        >
+                            <img src="/assets/img/social/linkedin.png" alt="LinkedIn" />
+                        </a>
                     </div>
+
                     <span></span>
                     <input type="text" placeholder="Name" />
                     <input type="email" placeholder="Email" />
@@ -31,12 +63,8 @@ export default function LoginPage() {
             <div className="form-container sign-in">
                 <form>
                     <h1>Sign In</h1>
-                    <div className="social-icons">
-                        <a href="#" className="icon"><i className="fa-brands fa-google-plus-g"></i></a>
-                        <a href="#" className="icon"><i className="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" className="icon"><i className="fa-brands fa-github"></i></a>
-                        <a href="#" className="icon"><i className="fa-brands fa-linkedin-in"></i></a>
-                    </div>
+
+
                     <span>or use your email password</span>
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />

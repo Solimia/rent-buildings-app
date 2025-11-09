@@ -58,12 +58,18 @@ export default function App() {
     }
 
     // Анімація дощу
-    function animateRain() {
-      requestAnimationFrame(animateRain);
-      c.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      rainArray.forEach((r) => r.update());
-    }
-    animateRain();
+// Анімація дощу
+function animateRain() {
+  requestAnimationFrame(animateRain);
+  c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+
+  // замість rainArray.forEach((r) => r.update());
+  for (const r of rainArray) {
+    r.update();
+  }
+}
+animateRain();
+
 
     // 🎥 Рух при русі миші
     const handleMouseMove = (e) => {

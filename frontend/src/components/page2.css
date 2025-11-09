@@ -90,7 +90,6 @@ body {
 }
 
 .button-start {
-	font-family: Arial;
 	font-weight: 600;
 	text-transform: uppercase;
 	font-size: calc(var(--index) * .71);
