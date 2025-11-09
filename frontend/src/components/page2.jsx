@@ -120,7 +120,7 @@ export default function App() {
         <div className="layers__item layer-3">
           <div className="hero-content">
             <h1>
-              Homes <span></span>
+              Homes 
             </h1>
             <div className="hero-content__p"></div>
             <button className="button-start">view options</button>
