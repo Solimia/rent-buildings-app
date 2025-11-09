@@ -20,11 +20,6 @@ export default function Header() {
     }, [contheme])
 
     function setThemes() {
-        // if (themechanger.getTheme() == Light)
-        //     themechanger.setTheme(Dark);
-        // else
-        //     themechanger.setTheme(Light);
-        // console.log(themechanger.getTheme())
         setconTheme((prev) => (prev === Light ? Dark : Light));
     }
     const ProfileRef = useRef();
@@ -51,14 +46,6 @@ export default function Header() {
         <>
             <div className='HeaderMenu-class'>
                 <div className='RightMenu-div'>
-
-                    {/* <div className='SearchValue'>
-                        <input className='classLight' type="text" />
-
-                        <div className='CircleIconLight'>
-                            <div id='searchIcon'></div>
-                        </div>
-                    </div> */}
                     <div className='ProfileIconM'>
                         <div className='IconDevDB' style={{ backgroundImage: `${contheme === Light ? Icon : IconD}` }}></div>
                         <div className='InnerIconT'>
@@ -79,13 +66,13 @@ export default function Header() {
                     </div>
 
                     <div className='ProfileIcon'>
-                        <div onClick={() => setParams()} className='ProfileIconM'>
+                        <button onClick={() => setParams()} className='ProfileIconM'>
                             <div className='InnerIcon'>
                                 <p>Rubel Maksym</p>
 
                             </div>
                             <div className='ProfileImage'></div>
-                        </div>
+                        </button>
 
 
                         <div ref={ProfileRef} className='InnerBlock'>
@@ -97,7 +84,7 @@ export default function Header() {
                                 <div className={contheme !== Light ? 'settingIcon' : 'settingIcon1'}></div>
 
                             </div>
-                            <div onClick={() => setThemes()} className='CInner'>
+                            <button onClick={() => setThemes()} className='CInner'>
                                 <div className='InnerIcon-true'>
                                     <p>Theme</p>
 
@@ -110,7 +97,7 @@ export default function Header() {
                                             })`,
                                     }}
                                 ></div>
-                            </div>
+                            </button>
                             <div className='CInner'>
                                 <div className='InnerIcon-true'>
                                     <p>Exit</p>

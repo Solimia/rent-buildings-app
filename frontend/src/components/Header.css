@@ -19,7 +19,7 @@
 
 .HeaderMenu-class {
     position: fixed;
-
+    display: flex;
     width: 80vw;
     height: 60px;
     transform-origin: center center;
@@ -30,26 +30,19 @@
     border-radius: 30px;
     background-color: var(--bg-hcolor);
     box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
-    justify-content: start;
+    flex-direction: row;
     align-items: start;
-    flex-direction: column;
+    justify-content: space-between;
     box-sizing: border-box;
     border: 0.5px solid var(--br-hcolor);
     backdrop-filter: blur(30px);
-    box-sizing: border-box;
-    justify-content: space-between;
     padding: 3px;
-    display: flex;
-    flex-direction: row;
-    
-
 }
 
 .InnerIcon {
     height: 100%;
     width: 100%;
     border-radius: 50px 0 0 50px;
-    /* background-color: rebeccapurple; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -62,7 +55,6 @@
     font-size: 15px;
     white-space: nowrap;
     font-family: "Golos Text", sans-serif;
-    /* background-color: red; */
     margin: 10px;
     color: var(--ft-color);
 }
@@ -71,23 +63,13 @@
     font-size: 15px;
     white-space: nowrap;
     font-family: "Golos Text", sans-serif;
-    /* background-color: red; */
-    /* margin-left: 10px; */
     margin-right: 20px;
-
     color: var(--ft-color);
 }
 
-/* .ProfileIcon p 
-{
-    font-size: 13px;
-    white-space: nowrap;
-} */
 .ProfileImage {
 
     aspect-ratio: 1 / 1;
-    /* width: 100%; */
-    
     height: 100%;
     border-radius: 50%;
     background: url(https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611737.jpg?semt=ais_hybrid&w=740&q=80);
@@ -101,7 +83,6 @@
 }
 
 .CircleIcon {
-    /* width: 48px; */
     height: 100%;
     background-color: var(--bg-hcolor1);
     border: 0.5px solid var(--br-hcolor);
@@ -111,7 +92,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
 }
 
 .CircleIconT {
@@ -124,67 +104,52 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
 
 
 #heartIcon {
-    /* margin-top: 2px; */
     width: 100%;
     height: 100%;
     background: url(../assets/img/heart.png);
     background-position: center center;
     background-size: 25px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
-    /* transform: translate(-50%,-50%); */
-
 }
 
 #basketIcon {
-    /* margin-top: 2px; */
     width: 100%;
     height: 100%;
     background: url(../assets/img/shopping-basketD.png);
     background-position: center center;
     background-size: 20px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
-    /* position: absolute; */
-
 }
 
 #basketIcon1 {
-    /* margin-top: 2px; */
     width: 100%;
     height: 100%;
     background: url(../assets/img/shopping-basket.png);
     background-position: center center;
     background-size: 20px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
-    /* position: absolute; */
-
 }
 
 #IconDev {
-
     aspect-ratio: 1 / 1;
     height: 100%;
     background: url(../assets/img/iconD.png);
     background-position: center center;
     background-size: 30px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
@@ -209,7 +174,6 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    /* background-color: rebeccapurple; */
     gap: 5px;
 }
 
@@ -220,12 +184,13 @@
     border: 0;
     font-family: "Golos Text", sans-serif;
     font-size: 18px;
-    /* margin: 10px; */
     border-radius: 50px;
     background-color: transparent;
     color: white;
     padding: 10px;
     box-sizing: border-box;
+    color: black;
+    font-size: 15px;
 }
 
 
@@ -233,11 +198,8 @@
 .SearchValue {
     width: 100%;
     height: 50px;
-    /* background-color: rgba(15, 9, 12, 0.56); */
     background-color: #ffffff;
-    /* border: 0.5px solid rgba(60, 60, 60, 0.4); */
     border: 0.5px solid rgba(60, 60, 60, 0.1);
-
     border-radius: 30px;
     display: flex;
     flex-direction: row;
@@ -245,11 +207,6 @@
     align-items: center;
     padding: 3px;
     gap: 3px;
-}
-
-.classLight {
-    color: black;
-    font-size: 15px;
 }
 
 .classLight::placeholder {
@@ -278,7 +235,6 @@
     background-position: center center;
     background-size: 40%;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.3s all ease-in-out;
     transform-origin: center center;
@@ -295,12 +251,10 @@
     background-position: center center;
     background-size: 40%;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.3s all ease-in-out;
     transform-origin: center center;
     position: absolute;
-    /* transition: transform 0.3s ease-in-out; */
     transform: translateY(100%);
     opacity: 0;
 
@@ -322,9 +276,6 @@
     display: flex;
     flex-direction: column;
     background-color: rebeccapurple;
-    /* width: 300px; */
-    /* height: min-content; */
-
 }
 
 .InnerMenu ul {
@@ -333,26 +284,22 @@
 
 .ProfileIconM {
     width: min-content;
-
     height: 50px;
-
-
-
-
     padding: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.1s ease-in-out;
     z-index: 100;
-
+    outline: none;
+    border: 0;
+    background: transparent;
 }
 
 
 .ProfileIcon {
     width: min-content;
     background-color: var(--bg-hcolor);
-
     border: 0.5px solid var(--br-hcolor);
     border-radius: 25px;
     padding: 1px;
@@ -361,7 +308,6 @@
     justify-content: start;
     gap: 5px;
     align-items: start;
-    /* transition: all 0.2s ease-in-out; */
     position: relative;
     color: var(--ft-color);
     overflow: visible;
@@ -372,17 +318,14 @@
     position: absolute;
     top: 115%;
     transition: height 0.5s ease-in-out;
-
     left: 0;
     width: 100%;
     height: 0;
     background-color: var(--bg-hcolor);
     box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.05);
     border: 0.5px solid var(--br-hcolor);
-
     border-radius: 25px;
     opacity: 0;
-    /* transition: all 0.2s ease-in-out; */
     pointer-events: none;
     display: flex;
     flex-direction: column;
@@ -395,18 +338,6 @@
 
 }
 
-/* .ProfileIcon:hover .InnerBlock{
-    height: 200px;
-    opacity: 1;
-
-    pointer-events: auto;
-} */
-
-/* .ProfileIcon:hover .CInner {
-    opacity: 1;
-    max-height: 50px;
-}
-*/
 .CInner {
     border-radius: 40px;
     width: 100%;
@@ -414,11 +345,12 @@
     background-color: var(--c-color);
     z-index: 101;
     min-height: 0;
-
     overflow: hidden;
     transition: all 0.2s ease-in-out;
     display: flex;
     flex-direction: row;
+    outline: none;
+    border: 0;
 }
 
 .settingIcon {
@@ -428,7 +360,6 @@
     background-position: center center;
     background-size: 18px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
@@ -441,7 +372,6 @@
     background-position: center center;
     background-size: 18px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
@@ -454,11 +384,11 @@
     background-position: center center;
     background-size: 15px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
 }
+
 .LogIcon1 {
     aspect-ratio: 1 / 1;
     height: 100%;
@@ -466,11 +396,11 @@
     background-position: center center;
     background-size: 15px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
 }
+
 #ThemeIcon {
     aspect-ratio: 1 / 1;
     height: 100%;
@@ -478,7 +408,6 @@
     background-position: center center;
     background-size: 25px;
     background-repeat: no-repeat;
-    /* background-color: red; */
     border-radius: 50%;
     transition: 0.2s all ease-in-out;
     transform-origin: center center;
@@ -488,7 +417,6 @@
     height: 100%;
     width: 100%;
     border-radius: 50px 0 0 50px;
-    /* background-color: rebeccapurple; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -502,7 +430,6 @@
     font-size: 15px;
     white-space: nowrap;
     font-family: "Golos Text", sans-serif;
-    /* background-color: red; */
     margin: 15px;
     color: var(--ft-color);
 }
@@ -512,7 +439,6 @@
 }
 
 .IconDevDB {
-
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 18px;

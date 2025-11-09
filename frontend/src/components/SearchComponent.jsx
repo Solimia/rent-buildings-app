@@ -3,7 +3,7 @@ import React from 'react'
 export default function SearchComponent() {
     return (
         <label className="label-level1">
-            <p> </p>
+            Search
             <div className='SearchValue'>
                 <input placeholder='Search' className='classLight' type="text" />
 

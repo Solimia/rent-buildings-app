@@ -13,12 +13,12 @@ import { filter } from 'framer-motion/client'
 import SearchComponent from './SearchComponent.jsx'
 import { CounterContext } from '../context/counter_context.jsx'
 export default function Animationblox() {
-    const { contheme, setconTheme } = useContext(CounterContext);
+    const { contheme } = useContext(CounterContext);
 
     useEffect(() => {
         document.documentElement.dataset.theme = contheme;
     }, [contheme]);
-    const text = "Test Text"
+
     return (
         <>
             {/* <button

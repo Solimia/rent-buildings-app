@@ -1,13 +1,11 @@
 :root {
     --scrollTop: 0;
     --scrollText: 0;
-
-}
-
-:root {
     --card-bg-color: white;
     --ft-color-master: rgba(0, 0, 0, 0.833);
 }
+
+
 
 [data-theme='dark'] {
     --card-bg-color: #000000e2;
@@ -37,8 +35,6 @@
     overflow: hidden;
     position: relative;
     perspective: 1000px;
-    /* filter: blur(5px); */
-
 }
 
 .Layer1 {
@@ -85,7 +81,6 @@
     font-weight: bolder;
     letter-spacing: -5px;
     width: 1000px;
-    /* background-color: red; */
     z-index: 2;
     color: white;
     position: absolute;
@@ -100,22 +95,18 @@
     font-weight: bolder;
     letter-spacing: -5px;
     width: min-content;
-    /* background-color: red; */
     z-index: 2;
     color: white;
     position: absolute;
     top: 17%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     white-space: nowrap;
 }
 
 .mSpan2 {
     display: inline-block;
-
     width: auto;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 200px;
     font-weight: bolder;
@@ -159,7 +150,6 @@
     color: rgb(255, 255, 255);
     width: 100%;
     text-align: center;
-
 }
 
 .PText {
@@ -168,12 +158,10 @@
     padding: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    /* background-color: red; */
 }
 
 .PText :nth-last-child(1) {
     border-bottom: 0;
-
 }
 
 .RowFontText {
@@ -190,7 +178,6 @@
 
 .ThirdCol {
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     flex-direction: column;
@@ -198,35 +185,25 @@
     width: 100vw;
     min-height: 100vh;
     overflow: hidden;
-
     perspective: 1000px;
     background: linear-gradient(-170deg, #0d1216, #001629);
-    ;
     gap: clamp(20px, 5vw, 30px);
-
     box-sizing: border-box;
-
-    /* padding-right: clamp(20px, 5vw, 100px); */
-
 }
 
 .carusel {
     width: 100vw;
     height: 100vh;
-
     overflow: hidden;
     transition: all 0.3s ease-out;
-
 }
 
 .EmptySpace {
     width: 100%;
-    /* background-color: rebeccapurple; */
     height: 100%;
     display: flex;
     flex-direction: column;
     border-radius: 18px;
-
     justify-content: center;
     align-items: center;
 }
@@ -249,7 +226,6 @@
     backdrop-filter: blur(10px);
     will-change: rotate;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.048);
-    /* transform: rotate(-70deg); */
     transition: all 0.2s ease-out;
 }
 
@@ -268,7 +244,6 @@
 .innerItem1,
 .innerItem2,
 .innerItem3 {
-
     width: 100%;
     height: 100%;
     background-color: orange;
@@ -323,10 +298,7 @@
 .CardMoveback {
     width: 35%;
     height: 100%;
-    /* background-color: red; */
     display: flex;
-
-
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -335,7 +307,6 @@
 .CardMovebacksec {
     width: 35%;
     height: 100%;
-    /* background-color: rgb(0, 68, 255); */
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -346,16 +317,13 @@
 .CardMover {
     width: 100%;
     height: 30%;
-    /* background-color: yellow; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
 }
 
 .Imaged-class {
-
     height: 100%;
     aspect-ratio: 1 / 1;
     background-color: aqua;
@@ -367,13 +335,11 @@
     justify-content: center;
     align-items: start;
     flex-direction: column;
-    /* background-color: saddlebrown; */
     padding: 10px;
     box-sizing: border-box;
 }
 
 .textclass-div p {
-    /* font-weight: bold; */
     font-family: 'Underground', Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: var(--ft-color-master);

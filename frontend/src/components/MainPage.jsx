@@ -12,7 +12,7 @@ export default function MainPage() {
   const RowRef = useRef();
   const ImageRef = useRef();
   const CardRotateRef = useRef();
-  const { contheme, setconTheme } = useContext(CounterContext);
+  const { contheme } = useContext(CounterContext);
 
   useEffect(() => {
     document.documentElement.dataset.theme = contheme;
@@ -46,9 +46,6 @@ export default function MainPage() {
         rowR.style.opacity = 0.25 + scrollFraction2 * 3;
       }
       const ImageR = ImageRef.current;
-      if (ImageR) {
-        // ImageR.style.filter = `blur(${scrollFraction3 * 20}px)`;
-      }
       const CardRotateR = CardRotateRef.current;
       if (CardRotateR) {
         CardRotateR.style.transform = `rotate(${-100 + scrollFraction * 100}deg)
@@ -103,7 +100,7 @@ export default function MainPage() {
         <div className='Layer3'></div>
         <div className='Layer4'>{
           text.split('').map((char, index) => {
-            return <motion.span className='mSpan2'
+            return <motion.span key={index} className='mSpan2'
               initial={{
                 opacity: 0,
                 filter: "blur(10px)",
