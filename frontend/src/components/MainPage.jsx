@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import "./MainPage.css"
 import ButtonH from './HoverButton';
 import Button from './HoverButton';
 import { motion } from 'framer-motion';
+import CardMove from './CardMove';
+import { CounterContext } from '../context/counter_context';
 
 export default function MainPage() {
 
@@ -10,7 +12,11 @@ export default function MainPage() {
   const RowRef = useRef();
   const ImageRef = useRef();
   const CardRotateRef = useRef();
+  const { contheme, setconTheme } = useContext(CounterContext);
 
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", contheme);
+  }, [contheme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -41,7 +47,7 @@ export default function MainPage() {
       }
       const ImageR = ImageRef.current;
       if (ImageR) {
-        ImageR.style.filter = `blur(${scrollFraction3 * 20}px)`;
+        // ImageR.style.filter = `blur(${scrollFraction3 * 20}px)`;
       }
       const CardRotateR = CardRotateRef.current;
       if (CardRotateR) {
@@ -101,12 +107,12 @@ export default function MainPage() {
               initial={{
                 opacity: 0,
                 filter: "blur(10px)",
-                y: -200, 
+                y: -200,
               }}
               whileInView={{
                 opacity: 1,
                 filter: "blur(0px)",
-                y: 0, 
+                y: 0,
               }}
               transition={{
                 duration: 1,
@@ -122,63 +128,28 @@ export default function MainPage() {
 
           })
         }</div>
-        <Button></Button>
+
 
       </div>
       <div className='FirstCol2'>
-        <div ref={RowRef} className="FirstRow">
-          <div className="hText"><p>HOUSE PLAN</p></div>
-          <div className="PText">
-            <div id='FirstTranslete' className='RowFontText'>
-              <p>Living Room</p>
-              <p>21m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Dining Room</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-
-          </div>
+        <div className='CardMoveback'>
+          <CardMove></CardMove>
+          <CardMove></CardMove>
         </div>
-        <div className="SecondRow"></div>
+        <div className='CardMovebacksec'>
+          <CardMove IsReversed={true}></CardMove>
+
+        </div>
       </div>
       <div className='ThirdCol'>
-        <div ref={CardRotateRef} className="carusel1">
-
-        </div>
-        <div className='EmptySpace'>
-          <div ref={CaruselRef} className="carusel">
-            <div style={{ transform: `translateY(${translete}%)` }} className='innerCarusel'>
-              <div className="innerItem1"></div>
-              <div className="innerItem2"></div>
-              <div className="innerItem3"></div>
-            </div>
-
+        <div ref={CaruselRef} className="carusel">
+          <div style={{ transform: `translateY(${translete}%)` }} className='innerCarusel'>
+            <div className="innerItem1"></div>
+            <div className="innerItem2"></div>
+            <div className="innerItem3"></div>
           </div>
-        </div>
 
+        </div>
       </div>
 
     </div>

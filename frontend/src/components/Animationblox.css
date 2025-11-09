@@ -1,7 +1,67 @@
+:root {
+    --bg-color2: rgb(255, 255, 255);
+    --br-color: rgba(245, 239, 235, 0.4);
+    --bg-collor: rgba(252, 252, 252, 0.03);
+    --sp-collor: #79739a;
+    --line-collorr: #f2f2f2;
+}
+
+[data-theme='dark'] {
+    --bg-color2: rgba(15, 9, 12, 0.56);
+    --br-color: rgba(60, 60, 60, 0.4);
+    --bg-collor: url("../assets/img/back.jpg");
+    --sp-collor: #dbd8eacc;
+    --line-collorr: #e0dfe71e;
+
+}
+
+:root {
+    --bg-color: white;
+    --ft-color: rgba(0, 0, 0, 0.833);
+    --ft-color1: rgba(0, 0, 0, 0.833);
+
+    --ft-colorhv: #666;
+    --mbg-color: #f0f0f08e;
+}
+
+[data-theme="dark"] {
+    --bg-color: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.06) 0%,
+            rgba(255, 255, 255, 0.03) 70%);
+    ;
+    --ft-color: rgba(255, 255, 255, 0.833);
+    --ft-color1: rgba(255, 255, 255, 0.56);
+    --ft-colorhv: rgba(255, 255, 255, 0.56);
+    --mbg-color: rgba(255, 255, 255, 0.03);
+}
+
+.RowWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    min-height: 100vw;
+    background-color: rgba(0, 0, 0, 0.937);
+
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: var(--bg-collor);
+    margin-top: 0px;
+    /* background: url(../assets/img/trava.jpg); */
+    background-position: start center;
+    background-size: 100%;
+    transition: all 0.5s ease-in-out;
+    padding-top: 100px;
+
+    /* background-repeat: no-repeat; */
+}
+
 .Card-class {
     width: 280px;
     height: 370px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--bg-color2);
     border-radius: 18px;
     transform-origin: left top;
     overflow: hidden;
@@ -9,10 +69,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    backdrop-filter: blur(30px);
     transition: all 0.1s ease-out;
     margin: 0;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.112);
 }
 
 .Card-classRight {
@@ -46,7 +107,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
 }
 
 .SecondCol {
@@ -100,7 +161,8 @@
     /* background-color: rgb(222, 185, 185); */
 
 
-    border-bottom: 2px solid #f2f2f2;
+    border-bottom: 2px solid var(--line-collorr);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,6 +186,8 @@
     font-size: 20px;
     /* font-weight: bold; */
     text-align: center;
+    color: var(--ft-color);
+
 }
 
 .IconSale {
@@ -149,7 +213,7 @@
 
     font-family: 'UndergroundHeavy';
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.805);
+    color: var(--ft-color);
 }
 
 .inner-3Row {
@@ -173,8 +237,7 @@
     box-sizing: border-box;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.489);
-    color: #79739a;
-
+    color: var(--sp-collor);
 }
 
 .AddressText p {
@@ -199,7 +262,7 @@
     height: min-content;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #f2f2f2;
+    border-bottom: 2px solid var(--line-collorr);
     padding-bottom: 10px;
 }
 
@@ -287,6 +350,7 @@
 
 .Owner-Name p {
     font-size: 17px;
+    color: var(--ft-color);
     /* font-weight: bold; */
 
 }
@@ -294,7 +358,7 @@
 .Owner-Name span {
     font-size: 13px;
     /* font-weight: bold; */
-    color: #79739a;
+    color: var(--sp-collor);
 }
 
 .Div23 {
@@ -331,32 +395,17 @@
 .SpanNight {
     font-size: 14px;
     font-weight: normal;
-    color: #79739a;
+    color: var(--sp-collor);
 
 }
 
 .SpanText {
     font-size: 14px;
     font-weight: normal;
-    color: #79739a;
+    color: var(--sp-collor);
 
 }
 
-.RowWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-    width: 100%;
-    min-height: 100vw;
-    /* background-color: red; */
-    gap: 70px;
-    padding: 20px;
-    box-sizing: border-box;
-    /* background: url(../assets/img/trava.jpg); */
-    background-position: center center;
-    background-size: contain;
-}
 
 
 
@@ -368,7 +417,7 @@
     align-items: start;
     gap: 20px;
     /* width: 100%; */
-    height: 3000px;
+    height: min-content;
     width: min-content;
     /* overflow: hidden; */
 }
@@ -384,23 +433,15 @@
     gap: 20px;
     background-color: transparent;
 
+
 }
 
-:root {
-    --bg-color2: rgb(255, 255, 255);
-    --br-color: rgba(245, 239, 235, 0.4);
-    ;
-}
 
-[data-theme='dark'] {
-    --bg-color2: rgba(15, 9, 12, 0.56);
-    --br-color: rgba(60, 60, 60, 0.4);
-}
 
 .SideBarWrapItem {
     width: min-content;
-    min-height: 100px;
-    height: 1000px;
+    /* min-height: 100px; */
+    min-height: 100vh;
 
     background-color: var(--bg-color2);
 
