@@ -107,9 +107,9 @@ export default function App() {
               Homes <span></span>
             </h1>
             <div className="hero-content__p">
-              Discover your perfect home with us. Explore a wide range of
+
             </div>
-            <button className="button-start">consider</button>
+            <button className="button-start">view options</button>
           </div>
         </div>
         <div className="layers__item layer-4">
