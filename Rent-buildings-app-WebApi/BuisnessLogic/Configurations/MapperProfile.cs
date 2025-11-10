@@ -2,6 +2,7 @@
 using BuisnessLogic.DTO_s;
 using BuisnessLogic.DTO_s.HouseDto;
 using BuisnessLogic.DTO_s.HouseDTO;
+using BuisnessLogic.DTOs.Accounts;
 using DataAccess.Data.Entities;
 using System;
 using System.Collections.Generic;
@@ -56,6 +57,9 @@ namespace BuisnessLogic.Configurations
             CreateMap<Booking, BookingDto>()
                 .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.User.Id));
 
+            CreateMap<RegisterModel, User>()
+                .ForMember(x => x.UserName, opt => opt.MapFrom(model => model.Email))
+                .ForMember(x => x.PasswordHash, opt => opt.Ignore());
             // ApplicationUser → UserDto
             //CreateMap<User, UserDto>();
 
