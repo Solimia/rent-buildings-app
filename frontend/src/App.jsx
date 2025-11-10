@@ -16,11 +16,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<LoginPage />}></Route>
+
           <Route path='/' element={<Layout />}>
-            <Route index element={<MainPage />}></Route>
+            <Route path='/Element' element={<MainPage />}></Route>
             <Route path='/Main' element={<Animationblox />}></Route>
             <Route path='/page2' element={<Page2 />}></Route>
-            <Route path='/loginPage' element={<LoginPage />}></Route>
 
 
           </Route>
