@@ -35,6 +35,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IHouseService, HouseService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IAccountsService, AccountsService>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 var app = builder.Build();
