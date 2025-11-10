@@ -18,7 +18,15 @@ export default function LoginPage() {
                     <span></span>
                     <input type="text" placeholder="Name" />
                     <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Password" />                                       
+                        <input
+                        htmlFor="birthdate"
+                        type="date"
+                        id="birthdate"
+                        name="birthdate"
+                        max="<?php echo date('Y-m-d'); ?>"
+                        required />
+
                     <button type="button">Sign Up</button>
                 </form>
             </div>

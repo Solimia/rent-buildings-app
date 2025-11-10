@@ -2,13 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import MainPage from './components/MainPage'
 import Animationblox from './components/Animationblox'
 import Page2 from './components/page2'
 import LoginPage from './components/loginPage'
+
 
 function App() {
 
