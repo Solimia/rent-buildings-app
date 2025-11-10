@@ -1,14 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import "./MainPage.css"
-import ButtonH from './HoverButton';
-import Button from './HoverButton';
+import { motion } from 'framer-motion';
+import CardMove from './CardMove';
+import { CounterContext } from '../context/counter_context';
+
 export default function MainPage() {
 
   const CaruselRef = useRef();
   const RowRef = useRef();
-  const ImageRef = useRef();
   const CardRotateRef = useRef();
+  const { contheme } = useContext(CounterContext);
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = contheme;
+  }, [contheme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,10 +41,6 @@ export default function MainPage() {
       const rowR = RowRef.current;
       if (rowR) {
         rowR.style.opacity = 0.25 + scrollFraction2 * 3;
-      }
-      const ImageR = ImageRef.current;
-      if (ImageR) {
-        ImageR.style.filter = `blur(${scrollFraction3 * 20}px)`;
       }
       const CardRotateR = CardRotateRef.current;
       if (CardRotateR) {
@@ -84,72 +85,64 @@ export default function MainPage() {
     }, 3000);
     return () => clearInterval(interval);
   }, [ImageIndex]);
+  const text = "GLASSHAVEN"
 
   return (
     <div className='BackgroundPage'>
 
-      <div ref={ImageRef} className='FirstCol'>
+      <div className='FirstCol'>
         <div className='Layer1'></div>
         <div className='Layer2'></div>
         <div className='Layer3'></div>
-        <div className='Layer4'><p>GLASSHAVEN</p></div>
-        <Button></Button>
+        <div className='Layer4'>{
+          text.split('').map((char, index) => {
+            return <motion.span key={index} className='mSpan2'
+              initial={{
+                opacity: 0,
+                filter: "blur(10px)",
+                y: -200,
+              }}
+              whileInView={{
+                opacity: 1,
+                filter: "blur(0px)",
+                y: 0,
+              }}
+              transition={{
+                duration: 1,
+                delay: 0.12 * index
+              }}
+              viewport={{
+
+                once: true
+              }}
+            >
+              {char === " " ? '\u00A0' : char}
+            </motion.span>
+
+          })
+        }</div>
+
 
       </div>
       <div className='FirstCol2'>
-        <div ref={RowRef} className="FirstRow">
-          <div className="hText"><p>HOUSE PLAN</p></div>
-          <div className="PText">
-            <div id='FirstTranslete' className='RowFontText'>
-              <p>Living Room</p>
-              <p>21m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Dining Room</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-            <div className='RowFontText'>
-              <p>Studio - Kitchen</p>
-              <p>9.3m<sup>2</sup></p>
-
-            </div>
-
-          </div>
+        <div className='CardMoveback'>
+          <CardMove></CardMove>
+          <CardMove></CardMove>
         </div>
-        <div className="SecondRow"></div>
+        <div className='CardMovebacksec'>
+          <CardMove IsReversed={true}></CardMove>
+
+        </div>
       </div>
       <div className='ThirdCol'>
-        <div ref={CardRotateRef} className="carusel1">
-
-        </div>
-        <div className='EmptySpace'>
-          <div ref={CaruselRef} className="carusel">
-            <div style={{ transform: `translateY(${translete}%)` }} className='innerCarusel'>
-              <div className="innerItem1"></div>
-              <div className="innerItem2"></div>
-              <div className="innerItem3"></div>
-            </div>
-
+        <div ref={CaruselRef} className="carusel">
+          <div style={{ transform: `translateY(${translete}%)` }} className='innerCarusel'>
+            <div className="innerItem1"></div>
+            <div className="innerItem2"></div>
+            <div className="innerItem3"></div>
           </div>
-        </div>
 
+        </div>
       </div>
 
     </div>

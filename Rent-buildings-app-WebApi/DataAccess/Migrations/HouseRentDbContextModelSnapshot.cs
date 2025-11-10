@@ -55,7 +55,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Bookings");
+                    b.ToTable("Bookings", (string)null);
                 });
 
             modelBuilder.Entity("DataAccess.Data.Entities.Category", b =>
@@ -73,7 +73,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
 
                     b.HasData(
                         new
@@ -208,7 +208,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("TenantId");
 
-                    b.ToTable("Houses");
+                    b.ToTable("Houses", (string)null);
 
                     b.HasData(
                         new
@@ -286,7 +286,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("HouseId");
 
-                    b.ToTable("HouseImages");
+                    b.ToTable("HouseImages", (string)null);
 
                     b.HasData(
                         new
@@ -337,7 +337,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("DataAccess.Data.Entities.User", b =>

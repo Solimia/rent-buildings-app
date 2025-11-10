@@ -6,9 +6,9 @@ export default function MotionDivRight() {
         <>
             <motion.div
                 className='Card-classRight'
-                initial={{ scale: 1, rotate: -5, x: 50, y: 50 }}
-                whileInView={{ scale: 1, rotate: 0, x: 0, y: 0, transition: { duration: 0.3 } }}
-                viewport={{ once: true, amount: .4 }}
+                // initial={{ scale: 1, rotate: -5, x: 25, y: 25 }}
+                // whileInView={{ scale: 1, rotate: 0, x: 0, y: 0, transition: { duration: 0.3 } }}
+                // viewport={{ once: true, amount: .4 }}
 
             >
                 <div className='inner-card'>

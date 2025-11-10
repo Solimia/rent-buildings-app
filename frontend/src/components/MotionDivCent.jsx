@@ -6,9 +6,9 @@ export default function MotionDivCent() {
         <>
             <motion.div
                 className='Card-class'
-                initial={{ scale: 1, x: 0, y: 50 }}
-                whileInView={{ scale: 1, x: 0, y: 0, transition: { duration: 0.3 } }}
-                viewport={{ once: true, amount: .5 }}
+                // initial={{ scale: 1, x: 0, y: 25 }}
+                // whileInView={{ scale: 1, x: 0, y: 0, transition: { duration: 0.3 } }}
+                // viewport={{ once: true, amount: .5 }}
 
             >
                 <div className='inner-card'>
