@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./LoginPage.css";
 
+
 export default function LoginPage() {
     const [isActive, setIsActive] = useState(false);
 
@@ -13,48 +14,19 @@ export default function LoginPage() {
             <div className="form-container sign-up">
                 <form>
                     <h1 className="h1">Create Account</h1>
-                    <div className="social-icons">
-                        <a
-                            href="https://www.facebook.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="icon"
-                        >
-                            <img src="/components/assets/img/facebook.png" alt="Facebook" />
-                        </a>
-
-                        <a
-                            href="https://www.instagram.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="icon"
-                        >
-                            <img src="./components/assets/img/instagram.png" alt="Instagram" />
-                        </a>
-
-                        <a
-                            href="https://github.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="icon"
-                        >
-                            <img src="/assets/img/social/github.png" alt="GitHub" />
-                        </a>
-
-                        <a
-                            href="https://www.linkedin.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="icon"
-                        >
-                            <img src="/assets/img/social/linkedin.png" alt="LinkedIn" />
-                        </a>
-                    </div>
 
                     <span></span>
                     <input type="text" placeholder="Name" />
                     <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Password" />                                       
+                        <input
+                        htmlFor="birthdate"
+                        type="date"
+                        id="birthdate"
+                        name="birthdate"
+                        max="<?php echo date('Y-m-d'); ?>"
+                        required />
+
                     <button type="button">Sign Up</button>
                 </form>
             </div>
@@ -62,10 +34,10 @@ export default function LoginPage() {
             {/* Sign In Form */}
             <div className="form-container sign-in">
                 <form>
-                    <h1>Sign In</h1>
+                    <h1 className="h1">Sign In</h1>
 
 
-                    <span>or use your email password</span>
+                    <span className="h1">or use your email password</span>
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
                     <a href="https://tenor.com/uk/view/кот-смеётся-ржёт-кот-смеётся-кот-смеётся-с-пальцем-gif-16106940659961028099">Forget Your Password?</a>
@@ -78,7 +50,7 @@ export default function LoginPage() {
                 <div className="toggle">
                     <div className="toggle-panel toggle-left">
                         <h1>Welcome Back!</h1>
-                        <p></p>
+                        <p> Enter your personal details to use all of site features </p>
                         <button
                             className="hidden"
                             id="login"
@@ -103,6 +75,6 @@ export default function LoginPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

@@ -9,6 +9,7 @@ import Animationblox from './components/Animationblox'
 import Page2 from './components/page2'
 import LoginPage from './components/loginPage'
 
+
 function App() {
 
 
