@@ -11,7 +11,7 @@ export default function CardMove({ IsReversed }) {
                 }
                 whileInView={{ x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.8 }}
             >
                 <div className='textclass-div'>
                     <h3>Bathroom</h3>
@@ -26,7 +26,7 @@ export default function CardMove({ IsReversed }) {
                 }
                 whileInView={{ x: 0, scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
+                viewport={{ once: true,amount: 0.8 }}
             >
                 <div className='Imaged-class'></div>
                 <div className='textclass-div'>
