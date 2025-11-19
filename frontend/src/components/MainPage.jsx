@@ -3,6 +3,7 @@ import "./MainPage.css"
 import { motion } from 'framer-motion';
 import CardMove from './CardMove';
 import { CounterContext } from '../context/counter_context';
+import Reviews from './ReviewView.jsx';
 
 export default function MainPage() {
 
@@ -134,6 +135,11 @@ export default function MainPage() {
 
         </div>
       </div>
+
+      <div className="FirstCol2">
+        <Reviews></Reviews>
+      </div>
+      
       <div className='ThirdCol'>
         <div ref={CaruselRef} className="carusel">
           <div style={{ transform: `translateY(${translete}%)` }} className='innerCarusel'>

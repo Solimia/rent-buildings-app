@@ -1,0 +1,141 @@
+[data-theme='dark'] {
+  --card-bg-color: #111;
+  --ft-color-master: #ffffffd5;
+  --border-color: #333;
+  --input-bg: #1a1a1a;
+  --input-border: #444;
+  --primary-btn-bg: #2364ff;
+  --primary-btn-hover: #1a4bcc;
+  --secondary-btn-bg: #2f2f2f;
+  --secondary-btn-hover: #3a3a3a;
+}
+
+/* --- STRUCTURE LEFT EXACTLY THE SAME --- */
+
+.reviews-container {
+  margin-top: 30px;
+}
+
+.reviews-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--ft-color-master);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reviews-empty {
+  color: #aaa;
+  font-style: italic;
+}
+
+.review-card {
+  background: var(--card-bg-color);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.review-name {
+  font-weight: 600;
+  color: var(--ft-color-master);
+}
+
+.review-rating {
+  color: #ffcc33;
+  font-weight: bold;
+}
+
+.review-text {
+  color: var(--ft-color-master);
+  margin-top: 6px;
+}
+
+.reviews-add-btn {
+  margin-top: 20px;
+  background: var(--primary-btn-bg);
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reviews-add-btn:hover {
+  background: var(--primary-btn-hover);
+}
+
+.review-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+  max-width: 350px;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--ft-color-master);
+  font-size: 14px;
+}
+
+.review-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.review-form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  flex: 1;
+  background: var(--primary-btn-bg);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--primary-btn-hover);
+}
+
+.btn-secondary {
+  flex: 1;
+  background: var(--secondary-btn-bg);
+  padding: 10px;
+  color: var(--ft-color-master);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--secondary-btn-hover);
+}
