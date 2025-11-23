@@ -14,7 +14,8 @@ namespace BuisnessLogic.Interfaces
         Task<bool> DeleteHouseAsync(int id);
 
         Task<IEnumerable<ReviewDto>> GetReviewsAsync(int houseId);
-        Task<IEnumerable<HouseImageDto>> GetImagesAsync(int houseId);
+        Task<IList<HouseImageDto>> GetImagesAsync(int houseId);
+        //Task<IEnumerable<HouseImageDto>> GetImagesAsync(int houseId);
         Task<IEnumerable<HouseDto>> SearchHousesAsync(HouseDetailsDto criteria);
     }
 }

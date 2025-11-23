@@ -27,7 +27,12 @@ namespace DataAccess.Repositories
             var entity = await GetByIdAsync(id);
             await DeleteAsync(entity);
         }
+        public async Task<IList<HouseImage>> GetImages(int id)
+        {
+            var entities = context.HouseImages.Where(x=> x.HouseId == id);
 
+            return await entities.ToListAsync();
+        }
         public async Task DeleteAsync(T? entity)
         {
             if (entity != null)

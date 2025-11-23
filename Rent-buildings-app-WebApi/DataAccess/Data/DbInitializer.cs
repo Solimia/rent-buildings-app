@@ -19,6 +19,7 @@ namespace DataAccess.Data
                     Id = 1,
                     Title = "Cozy Cottage",
                     Description = "A small cozy house in the countryside.",
+                    MainimgUrl = "https://zhzh.info/_pu/104/86083546.jpg",
                     Address = "123 Country Lane",
                     City = "Kyiv",
                     Country = "Ukraine",
@@ -50,6 +51,8 @@ namespace DataAccess.Data
                     Id = 2,
                     Title = "Modern Apartment",
                     Description = "A modern apartment in the city center.",
+                    MainimgUrl = "https://media.decorateme.com/images/1c/ee/e1/moshchenie-bruschatkoi-vygliadit-estestvenno-i-organichno.webp",
+
                     Address = "45 Main Street",
                     City = "Lviv",
                     Country = "Ukraine",

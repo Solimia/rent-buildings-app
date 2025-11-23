@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BuisnessLogic.Services
 {
@@ -58,11 +59,15 @@ namespace BuisnessLogic.Services
 
 
 
-        public async Task<IEnumerable<HouseImageDto>> GetImagesAsync(int houseId)
+        public async Task<IList<HouseImageDto>> GetImagesAsync(int houseId)
         {
             //var image = await houseRepository.GetByIdAsync(houseId);
             //return mapper.Map<IEnumerable<HouseImageDto>>(image);
-            throw new NotImplementedException();
+
+
+
+            var model = await houseRepository.GetImages(houseId);
+            return mapper.Map<IList<HouseImageDto>>(model);
 
         }
 

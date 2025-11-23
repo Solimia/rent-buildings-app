@@ -12,6 +12,7 @@ namespace DataAccess.Repositories
         Task<T?> GetByIdAsync(int id);
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
+        Task<IList<HouseImage>> GetImages(int id);
         Task DeleteAsync(int id);
         Task DeleteAsync(T? id);
         Task<IReadOnlyList<T>> GetAllWithIncludesAsync(params Expression<Func<T, object>>[] includes);
