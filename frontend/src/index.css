@@ -24,15 +24,12 @@ body {
 
 @font-face {
   font-family: 'Underground';
-  src: url('./assets/fonts/P22Underground-Medium.otf') format('truetype');
+  src: url('./assets/fonts/P22Underground-Medium.otf') format('opentype');
   font-weight: normal;
-  font-style: normal;
-
 }
+
 @font-face {
   font-family: 'UndergroundHeavy';
-  src: url(./assets/fonts/P22Underground-Heavy.otf) format('truetype');
+  src: url(../assets/fonts/P22Underground-Heavy.otf) format('opentype');
   font-weight: normal;
-  font-style: normal;
-
 }

@@ -20,7 +20,7 @@
 .HeaderMenu-class {
     position: fixed;
     display: flex;
-    width: 80vw;
+    width: 70vw;
     height: 60px;
     transform-origin: center center;
     transform: translate(-50%);
