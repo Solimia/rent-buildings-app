@@ -11,6 +11,10 @@ namespace BuisnessLogic.DTO_s.HouseDTO
 
         public string Country { get; set; }
         public double Area { get; set; }
+        public int Bathrooms { get; set; }
+        public int Rooms { get; set; }
+        public int MaxGuests { get; set; }
+
         public decimal PricePerNight { get; set; }
         public string OwnerId { get; set; }
 

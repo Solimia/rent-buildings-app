@@ -47,6 +47,11 @@ namespace BuisnessLogic.Services
                 await userManager.AddToRoleAsync(user, model.Role);
             }
         }
+        public async Task<List<User>> GetUsers()
+        {
+            var query = ctx.Users;
+            return(query.ToList());
+        }
         public async Task Login(LoginModel model, string? ipAddress)
         {
             var user = await userManager.FindByEmailAsync(model.Email);

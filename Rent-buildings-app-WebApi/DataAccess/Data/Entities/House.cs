@@ -16,6 +16,7 @@
         public string Country { get; set; }
 
         // Характеристики
+        public int Bathrooms { get; set; }
         public int Rooms { get; set; }
         public int MaxGuests { get; set; }
         public double Area { get; set; }
