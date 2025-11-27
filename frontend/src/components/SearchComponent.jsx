@@ -7,9 +7,7 @@ export default function SearchComponent() {
             <div className='SearchValue'>
                 <input placeholder='Search' className='classLight' type="text" />
 
-                <div className='CircleIconLight'>
-                    <div id='searchIcon'></div>
-                </div>
+             
              
             </div>
         </label>

@@ -134,6 +134,7 @@
     width: 100%;
     height: min-content;
     gap: 8px;
+    background-color: transparent;
 }
 .label-level1:hover p{
     color: var(--ft-color1);

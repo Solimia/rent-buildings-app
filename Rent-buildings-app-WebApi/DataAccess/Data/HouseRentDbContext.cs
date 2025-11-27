@@ -15,6 +15,7 @@ namespace DataAccess.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<HouseReview> HouseReviews { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

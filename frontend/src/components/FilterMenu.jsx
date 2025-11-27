@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./FilterMenu.css";
 import { div, label } from "framer-motion/client";
+import { CounterContext } from "../context/counter_context";
 
 export default function FilterMenu() {
-    const [selected, setSelected] = useState("house");
+    const [selected, setSelected] = useState("all");
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const {CategoryId,setCategoryId} = useContext(CounterContext);
+
     const options = [
-        { id: "house", label: "House" },
-        { id: "condo", label: "Condo" },
-        { id: "other", label: "Other" },
+        { id: "All", label: "All" },
+        { id: "5", label: "Cabin" },
+        { id: "4", label: "Villa" },
+        { id: "2", label: "House" },
     ];
 
     useEffect(() => {
@@ -35,10 +39,10 @@ export default function FilterMenu() {
                         <button
                             key={id}
                             onClick={() => {
-                                setSelected(id);
+                                setCategoryId(id);
                                 setCurrentIndex(idx);
                             }}
-                            className={`radio-btn ${selected === id ? "active" : ""}`}
+                            className={`radio-btn ${CategoryId === id ? "active" : ""}`}
                         >
                             {label}
                         </button>
