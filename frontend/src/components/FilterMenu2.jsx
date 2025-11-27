@@ -3,15 +3,15 @@ import "./FilterMenu.css";
 import { div, label } from "framer-motion/client";
 
 export default function FilterMenu2({ Title }) {
-    const [selected, setSelected] = useState("1");
+    const [selected, setSelected] = useState("Any");
     const [currentIndex, setCurrentIndex] = useState(0);
     const sliderBGRef = useRef();
     const options = [
+        { label: "Any" },
         { label: "1" },
         { label: "2" },
         { label: "3" },
-        { label: "4" },
-        { label: "5" },
+        { label: "4+" },
 
 
     ];

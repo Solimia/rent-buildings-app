@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Animationblox.css"
 import StarComp from './StarComp'
-export default function MotionDiv({ mainimgUrl, pricePerNight, title, address,ratingf }) {
+export default function MotionDiv({ mainimgUrl, pricePerNight, title, address,ratingf,rooms }) {
     return (
         <>
             <div className='Card-class'>
@@ -61,7 +61,7 @@ export default function MotionDiv({ mainimgUrl, pricePerNight, title, address,ra
                             <div className='Info-Icon'>
                                 <div className='BedIcon'></div>
 
-                                <p>5 <span className='SpanText'>bed.</span></p>
+                                <p>{rooms} <span className='SpanText'>bed.</span></p>
                             </div>
 
                             <div className='Info-Icon'>
