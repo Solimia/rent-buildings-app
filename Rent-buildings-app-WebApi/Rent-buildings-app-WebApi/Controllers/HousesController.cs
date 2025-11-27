@@ -78,6 +78,13 @@ namespace Rent_buildings_app_WebApi.Controllers
             var images = await houseService.GetImagesAsync(id);
             return Ok(images);
         }
+
+        [HttpGet("GetHousePagination")]
+        public async Task<IActionResult> GetHousePaginationController(int page,int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating)
+        {
+            var houses = await houseService.GetHousePagination(page, size, CategoryId, BedroomsCountm, BathroomsCount, Rating);
+            return Ok(houses);
+        }
         [HttpGet("{id}/details")]
         public async Task<ActionResult<HouseDetailsDto>> GetHouseDetails(int id)
         {

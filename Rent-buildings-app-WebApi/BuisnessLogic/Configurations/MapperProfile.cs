@@ -46,6 +46,9 @@ namespace BuisnessLogic.Configurations
             CreateMap<CreateCategoryDto, Category>();
 
 
+            CreateMap<PaginationObj<House>, PaginationDto<HouseDto>>();
+
+
             // HouseImage → HouseImageDto
             CreateMap<HouseImage, HouseImageDto>();
 

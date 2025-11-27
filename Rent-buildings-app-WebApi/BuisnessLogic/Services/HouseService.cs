@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BuisnessLogic.Services
 {
@@ -28,9 +29,9 @@ namespace BuisnessLogic.Services
         public async Task<HouseDto> CreateHouseAsync(CreateHouseDto houseDto)
         {
             var house = mapper.Map<House>(houseDto);
-            house.Rating = house.Reviews.Any()
-                ? house.Reviews.Average(r => r.Rating)
-                : 0;
+            //house.Rating = house.Reviews.Any()
+            //    ? house.Reviews.Average(r => r.Rating)
+            //    : 0;
 
             await houseRepository.AddAsync(house);
             return mapper.Map<HouseDto>(house);
@@ -49,7 +50,11 @@ namespace BuisnessLogic.Services
             var houses = await houseRepository.GetAllWithIncludesAsync(h => h.Category);
             return mapper.Map<IEnumerable<HouseDto>>(houses);
         }
-
+        public async Task<PaginationDto<HouseDto>> GetHousePagination(int page, int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating)
+        {
+            var houses = await houseRepository.GetHousePagination(page,size, CategoryId, BedroomsCountm, BathroomsCount, Rating);
+            return mapper.Map<PaginationDto<HouseDto>>(houses);
+        }
         public async Task<HouseDto> GetHouseByIdAsync(int id)
         {
             var house = await houseRepository.GetByIdWithIncludesAsync(id, h => h.Category);
@@ -58,11 +63,15 @@ namespace BuisnessLogic.Services
 
 
 
-        public async Task<IEnumerable<HouseImageDto>> GetImagesAsync(int houseId)
+        public async Task<IList<HouseImageDto>> GetImagesAsync(int houseId)
         {
             //var image = await houseRepository.GetByIdAsync(houseId);
             //return mapper.Map<IEnumerable<HouseImageDto>>(image);
-            throw new NotImplementedException();
+
+
+
+            var model = await houseRepository.GetImages(houseId);
+            return mapper.Map<IList<HouseImageDto>>(model);
 
         }
 
@@ -103,6 +112,8 @@ namespace BuisnessLogic.Services
 
             if (houseDto.Address != null)
                 entity.Address = houseDto.Address;
+
+
 
             if (houseDto.City != null)
                 entity.City = houseDto.City;

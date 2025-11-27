@@ -38,6 +38,17 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IAccountsService, AccountsService>();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowVite",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+             .AllowAnyHeader()
+             .AllowAnyMethod();
+        });
+});
+
 builder.Services.AddScoped<IHouseReviewRepository, HouseReviewRepository>();
 builder.Services.AddScoped<HouseReviewService>();
 
@@ -63,7 +74,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<ErrorHandlerMiddleware>();
-
+app.UseCors("AllowVite");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

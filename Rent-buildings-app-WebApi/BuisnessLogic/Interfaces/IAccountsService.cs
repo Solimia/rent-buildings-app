@@ -1,4 +1,5 @@
 ﻿using BuisnessLogic.DTOs.Accounts;
+using DataAccess.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace BuisnessLogic.Interfaces
         Task Register(RegisterModel model);
         Task Login(LoginModel model, string? ipAddress);
         Task Logout(LogoutModel model);
+        Task<List<User>> GetUsers();
     }
 }

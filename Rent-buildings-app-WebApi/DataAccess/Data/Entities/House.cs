@@ -8,12 +8,15 @@
         public string Title { get; set; }
         public string Description { get; set; }
 
+        public string MainimgUrl { get; set; }
+
         // Розташування
         public string Address { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
 
         // Характеристики
+        public int Bathrooms { get; set; }
         public int Rooms { get; set; }
         public int MaxGuests { get; set; }
         public double Area { get; set; }

@@ -24,6 +24,12 @@ namespace Rent_buildings_app_WebApi.Controllers
             return Ok();
         }
 
+        [HttpGet("getusers")]
+        public async Task<IActionResult> GetUseres()
+        {
+            
+            return Ok(await accountsService.GetUsers());
+        }
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
