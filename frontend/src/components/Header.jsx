@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import "./Header.css"
 import sunD from '../assets/img/sun.png';
 import nightD from '../assets/img/nightD.png';
@@ -6,18 +6,32 @@ import Icon from '../assets/img/icon.png';
 import IconD from '../assets/img/iconD.png';
 import { themechanger } from '../services/themech.service';
 import { CounterContext } from '../context/counter_context';
+import { u } from 'framer-motion/client';
+import { ismobile } from '../services/ismobile.service';
 export default function Header() {
 
     const Dark = 'dark';
     const Light = 'light';
-    const { contheme, setconTheme } = useContext(CounterContext);
-
+    const { contheme, setconTheme, setFilterData } = useContext(CounterContext);
+    
+    const isMobile = ismobile.useIsMobile();
     useEffect(() => {
         themechanger.setTheme(contheme);
         console.log(contheme)
         document.documentElement.dataset.theme = contheme;
     }, [contheme])
+    function FilterRide() {
+        if (isMobile) {
+            setFilterData((prev) => !prev);
 
+        }
+    }
+    useEffect(() => {
+        if (!isMobile) {
+            setFilterData(false);
+
+        }
+    }, [isMobile]);
     function setThemes() {
         setconTheme((prev) => (prev === Light ? Dark : Light));
     }
@@ -47,6 +61,7 @@ export default function Header() {
                 <div className='RightMenu-div'>
                     <div className='ProfileIconM'>
                         <div className='IconDevDB' style={{ backgroundImage: `${contheme === Light ? Icon : IconD}` }}></div>
+                        <button className='CircleIcon' style={{display : isMobile ? 'flex ' : 'none'}} onClick={() => FilterRide()}>Filter</button>
                         <div className='InnerIconT'>
                             <p id='RentP'>Rent  </p>
                             <p id='houseP'>house</p>

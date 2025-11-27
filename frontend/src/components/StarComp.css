@@ -1,0 +1,44 @@
+.star-rating-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: min-content;
+    height: min-content;
+    box-sizing: border-box;
+    padding: 5px;
+
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    border-radius: 30px;
+
+
+    background-color: #f7f7f7;
+    border: 1px solid rgba(196, 196, 196, 0.118);
+    /* position: absolute;
+    bottom: clamp(5px, 5vw, 8px);
+    left: clamp(5px, 5vw, 8px); */
+}
+
+/* .Card-class:hover .star-rating-container {
+    opacity: 1;
+
+    transform: translateX(0px);
+
+} */
+
+.starfilled {
+    width: 14px;
+    height: 14px;
+    /* background-color: red; */
+    background-image: url('../assets/img/starIcon.png');
+    background-size: cover;
+}
+.star-rating-container p {
+    font-family: "Golos Text", sans-serif;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.833);
+    margin: 0;
+    line-height: 0px;
+    text-align: center;
+}

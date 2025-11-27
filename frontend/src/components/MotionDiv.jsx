@@ -1,31 +1,51 @@
 import React from 'react'
 import "./Animationblox.css"
-export default function MotionDiv() {
+import StarComp from './StarComp'
+export default function MotionDiv({ mainimgUrl, pricePerNight, title, address,ratingf,rooms }) {
     return (
         <>
-            <div
-                className='Card-class'
-            >
-                <div className='inner-card'>
+            <div className='Card-class'>
+
+                <div className='Card-TopRightIcons'>
+
+                    <div className='FavoriteIcon'>
+                        <div className='heartIcon'></div>
+                    </div>
+
+                </div>
+
+                <div
+                    className="inner-card"
+                    style={
+                        mainimgUrl
+                            ? { backgroundImage: `url(${mainimgUrl})` }
+                            : {}
+                    }
+                >
+
+
 
                 </div>
                 <div className='inner-cardT'>
                     <div className='inner-cardTitle'>
                         <div className='inner-1Row'>
                             <div className='innerIn-1Row'>
-                                <p>$437<span className='SpanNight'>/night</span></p>
+                                <p>${pricePerNight}<span className='SpanNight'>/night</span></p>
                             </div>
-                            <div className='IconSale'>
+                            <div className='IconSale' style={{ opacity: '0' }}>
                                 <p>For sale</p>
                             </div>
+
                         </div>
                         <div className='inner-2Row'>
-                            <p>Luxury 5-bed Villa</p>
+                            <p>{title}</p>
+                            <StarComp rating={ratingf}></StarComp>
+
                         </div>
                         <div className='inner-3Row'>
                             <div className='MapIcon'></div>
                             <div className='AddressText'>
-                                <p>29 Terrace Rd, BH2 5EL</p>
+                                <p>{address}</p>
 
                             </div>
                         </div>
@@ -41,7 +61,7 @@ export default function MotionDiv() {
                             <div className='Info-Icon'>
                                 <div className='BedIcon'></div>
 
-                                <p>5 <span className='SpanText'>bed.</span></p>
+                                <p>{rooms} <span className='SpanText'>bed.</span></p>
                             </div>
 
                             <div className='Info-Icon'>
