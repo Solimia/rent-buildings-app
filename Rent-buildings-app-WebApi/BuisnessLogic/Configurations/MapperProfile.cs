@@ -50,8 +50,6 @@ namespace BuisnessLogic.Configurations
             CreateMap<HouseImage, HouseImageDto>();
 
             // Review → ReviewDto
-            CreateMap<Review, ReviewDto>()
-                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.User.Id));
 
             // Booking → BookingDto
             CreateMap<Booking, BookingDto>()

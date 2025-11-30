@@ -11,7 +11,7 @@ namespace DataAccess.Data.Entities
         public List<House> RentedHouses { get; set; } = new List<House>();
 
         // Відгуки користувача
-        public List<Review> Reviews { get; set; } = new List<Review>();
+        public List<HouseReview> HouseReviews { get; set; } = new List<HouseReview>();
 
         // Бронювання
         public List<Booking> Bookings { get; set; } = new List<Booking>();
