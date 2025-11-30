@@ -90,13 +90,41 @@ namespace DataAccess.Data
             );
         }
 
-        //public static void SeedReviews(this ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Review>().HasData(
-        //        new Review { Id = 1, HouseId = 1, UserId = 2, Comment = "Great place!", Rating = 5 },
-        //        new Review { Id = 2, HouseId = 1, UserId = 3, Comment = "Very cozy.", Rating = 4 }
-        //    );
-        //}
+
+
+
+        public static void SeedReviews(this ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<HouseReview>().HasData(
+                new HouseReview
+                {
+                    Id = 1,
+                    HouseId = 1,
+                    UserId = "1",
+                    Rating = 5,
+                    Comment = "Гарний просторий будинок, все супер!",
+                    CreatedAt = DateTime.Now
+                },
+                new HouseReview
+                {
+                    Id = 2,
+                    HouseId = 2,
+                    UserId = "1",
+                    Rating = 4,
+                    Comment = "Все добре, але поганий інтернет.",
+                    CreatedAt = DateTime.Now.AddMinutes(-30)
+                },
+                new HouseReview
+                {
+                    Id = 3,
+                    HouseId = 3,
+                    UserId = "1",
+                    Rating = 5,
+                    Comment = "Чисто, затишно, рекомендую!",
+                    CreatedAt = DateTime.Now.AddHours(-3)
+                }
+            );
+        }
 
         //public static void SeedBookings(this ModelBuilder modelBuilder)
         //{

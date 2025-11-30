@@ -10,7 +10,7 @@ namespace BuisnessLogic.DTO_s
     {
         public int Id { get; set; }
         public int HouseId { get; set; }
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
 
         public string ? UserEmail { get; set; }
         public int Rating { get; set; }

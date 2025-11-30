@@ -12,10 +12,10 @@ namespace DataAccess.Data.Entities
 
         // Будинок
         public int HouseId { get; set; }
-        public House House { get; set; }
+        public House? House { get; set; }
 
         // Орендар
-        public string UserId { get; set; }
+        public string? UserId { get; set; }
         public User User { get; set; }
 
         // Дати оренди

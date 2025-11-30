@@ -47,7 +47,7 @@
 
         // Рейтинг
         public double Rating { get; set; }
-        public List<Review> Reviews { get; set; } = new List<Review>();
+        public List<HouseReview> Reviews { get; set; } = new List<HouseReview>();
 
         // Власник
         public string? OwnerId { get; set; }
@@ -63,6 +63,8 @@
         // Фото
         public List<HouseImage> Images { get; set; } = new List<HouseImage>();
         public List<Booking> Bookings { get; set; } = new List<Booking>();// історія бронювань
+
+
 
     }
 

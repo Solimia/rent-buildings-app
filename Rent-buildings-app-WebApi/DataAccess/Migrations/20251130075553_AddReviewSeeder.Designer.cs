@@ -4,6 +4,7 @@ using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(HouseRentDbContext))]
-    partial class HouseRentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251130075553_AddReviewSeeder")]
+    partial class AddReviewSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -117,9 +120,6 @@ namespace DataAccess.Migrations
                     b.Property<double>("Area")
                         .HasColumnType("float");
 
-                    b.Property<int>("Bathrooms")
-                        .HasColumnType("int");
-
                     b.Property<int?>("CategoryId")
                         .HasColumnType("int");
 
@@ -167,10 +167,6 @@ namespace DataAccess.Migrations
 
                     b.Property<bool>("IsSmokingAllowed")
                         .HasColumnType("bit");
-
-                    b.Property<string>("MainimgUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MaxGuests")
                         .HasColumnType("int");
@@ -222,7 +218,6 @@ namespace DataAccess.Migrations
                             Id = 1,
                             Address = "123 Country Lane",
                             Area = 80.0,
-                            Bathrooms = 0,
                             CheckInTime = new TimeSpan(0, 14, 0, 0, 0),
                             CheckOutTime = new TimeSpan(0, 12, 0, 0, 0),
                             City = "Kyiv",
@@ -237,7 +232,6 @@ namespace DataAccess.Migrations
                             IsPetsAllowed = true,
                             IsShortTermAvailable = true,
                             IsSmokingAllowed = false,
-                            MainimgUrl = "https://zhzh.info/_pu/104/86083546.jpg",
                             MaxGuests = 4,
                             MinMonths = 1,
                             PricePerMonth = 1000m,
@@ -253,7 +247,6 @@ namespace DataAccess.Migrations
                             Id = 2,
                             Address = "45 Main Street",
                             Area = 60.0,
-                            Bathrooms = 0,
                             CheckInTime = new TimeSpan(0, 0, 0, 0, 0),
                             CheckOutTime = new TimeSpan(0, 0, 0, 0, 0),
                             City = "Lviv",
@@ -267,7 +260,6 @@ namespace DataAccess.Migrations
                             IsPetsAllowed = false,
                             IsShortTermAvailable = true,
                             IsSmokingAllowed = false,
-                            MainimgUrl = "https://media.decorateme.com/images/1c/ee/e1/moshchenie-bruschatkoi-vygliadit-estestvenno-i-organichno.webp",
                             MaxGuests = 3,
                             PricePerNight = 70m,
                             Rating = 0.0,
