@@ -1,14 +1,14 @@
 using BuisnessLogic.Configurations;
 using BuisnessLogic.Interfaces;
 using BuisnessLogic.Services;
+using BusinessLogic.Services;
 using DataAccess.Data;
+using DataAccess.Data.Entities;
 using DataAccess.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Rent_buildings_app_WebApi;
-using Microsoft.AspNetCore.Identity;
 using Rent_buildings_app_WebApi.Helpers;
-
-using DataAccess.Data.Entities;
 using static Rent_buildings_app_WebApi.Helpers.IdentitySeeder;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,6 +49,8 @@ builder.Services.AddCors(options =>
         });
 });
 
+builder.Services.AddScoped<IHouseReviewRepository, HouseReviewRepository>();
+builder.Services.AddScoped<HouseReviewService>();
 
 
 var app = builder.Build();
