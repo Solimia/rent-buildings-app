@@ -7,9 +7,8 @@ import FilterMenu2 from './FilterMenu2.jsx'
 import SearchComponent from './SearchComponent.jsx'
 import { CounterContext } from '../context/counter_context.jsx'
 import axios from 'axios'
-import { tr } from 'framer-motion/client'
 export default function Animationblox() {
-    const { contheme, filterdata, setFilterData,CategoryId } = useContext(CounterContext);
+    const { searchP,contheme, filterdata, setFilterData,CategoryId } = useContext(CounterContext);
     const [data, setData] = useState(null);
     const [page, setPage] = useState(1);
     const PageRef = useRef(page);
@@ -56,7 +55,7 @@ export default function Animationblox() {
     // const [CategoryId, setCategoryId] = useState("Any");
     // const [currentIndex1, setCurrentIndex] = useState(0);
     async function fetchFileredData() {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/Houses/GetHousePagination?page=${page}&size=12&CategoryId=${CategoryId}&BedroomsCountm=${BedRoomCount}&BathroomsCount=${BathRoomCount}&Rating=${Rating}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/Houses/GetHousePagination?page=${page}&size=12&CategoryId=${CategoryId}&BedroomsCountm=${BedRoomCount}&BathroomsCount=${BathRoomCount}&Rating=${Rating}&searchP=${searchP}`);
         const data = response.data;
         setData(data);
         console.log("filtered data:", data);
@@ -209,7 +208,7 @@ export default function Animationblox() {
                         {
                             data && data.items.map((item) => (
                                 <MotionDiv key={item.id} mainimgUrl={item.mainimgUrl} pricePerNight={item.pricePerNight}
-                                    address={item.address} ratingf={item.rating} title={item.title} rooms={item.rooms}></MotionDiv>
+                                    address={item.address} ratingf={item.rating} title={item.title} rooms={item.rooms} id={item.id}></MotionDiv>
                             ))
                         }
                     </div>

@@ -14,8 +14,8 @@ const initialState =
     setBedroomsCount: () => { },
     BathroomsCount: "Any",
     setBathroomsCount: () => { },
-    Rating: "Any",
-    setRating: () => { },
+    searchP: "",
+    setsearchP: () => { },
 }
 
 export const CounterContext = createContext(initialState);
@@ -27,7 +27,7 @@ export const CounterProvider = ({ children }) => {
     const [CategoryId, setCategoryId] = useState(initialState.CategoryId);
     const [BedroomsCount, setBedroomsCount] = useState(initialState.BedroomsCount);
     const [BathroomsCount, setBathroomsCount] = useState(initialState.BathroomsCount);
-    const [Rating, setRating] = useState(initialState.Rating);
+    const [searchP, setsearchP] = useState(initialState.searchP);
 
 
 
@@ -35,7 +35,7 @@ export const CounterProvider = ({ children }) => {
 
 
     return (
-        <CounterContext.Provider value={{ contheme, setconTheme ,filterdata,setFilterData, CategoryId,setCategoryId,BedroomsCount,setBedroomsCount,BathroomsCount,setBathroomsCount,Rating,setRating}}>
+        <CounterContext.Provider value={{ contheme, setconTheme ,filterdata,setFilterData, CategoryId,setCategoryId,BedroomsCount,setBedroomsCount,BathroomsCount,setBathroomsCount,searchP,setsearchP}}>
             {children}
         </CounterContext.Provider>
 
