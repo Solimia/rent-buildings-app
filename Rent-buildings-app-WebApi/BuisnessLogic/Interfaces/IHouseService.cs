@@ -12,7 +12,7 @@ namespace BuisnessLogic.Interfaces
         Task<HouseDto> CreateHouseAsync(CreateHouseDto houseDto);
         Task<House> UpdateHouseAsync(UpdateHouseDto houseDto);
         Task<bool> DeleteHouseAsync(int id);
-        Task<PaginationDto<HouseDto>> GetHousePagination(int page, int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating);
+        Task<PaginationDto<HouseDto>> GetHousePagination(int page, int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating, string? searchP);
         Task<IEnumerable<ReviewDto>> GetReviewsAsync(int houseId);
         Task<IList<HouseImageDto>> GetImagesAsync(int houseId);
         //Task<IEnumerable<HouseImageDto>> GetImagesAsync(int houseId);
