@@ -4,6 +4,7 @@ using DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(HouseRentDbContext))]
-    partial class HouseRentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251127114646_addBathCount")]
+    partial class addBathCount
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,6 +49,7 @@ namespace DataAccess.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -319,7 +323,7 @@ namespace DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DataAccess.Data.Entities.HouseReview", b =>
+            modelBuilder.Entity("DataAccess.Data.Entities.Review", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -328,10 +332,8 @@ namespace DataAccess.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Comment")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
 
                     b.Property<int>("HouseId")
                         .HasColumnType("int");
@@ -340,6 +342,7 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -348,36 +351,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("HouseReviews");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Comment = "Гарний просторий будинок, все супер!",
-                            CreatedAt = new DateTime(2025, 11, 30, 9, 55, 52, 17, DateTimeKind.Local).AddTicks(9473),
-                            HouseId = 1,
-                            Rating = 5,
-                            UserId = "1"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Comment = "Все добре, але поганий інтернет.",
-                            CreatedAt = new DateTime(2025, 11, 30, 9, 25, 52, 17, DateTimeKind.Local).AddTicks(9698),
-                            HouseId = 2,
-                            Rating = 4,
-                            UserId = "1"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Comment = "Чисто, затишно, рекомендую!",
-                            CreatedAt = new DateTime(2025, 11, 30, 6, 55, 52, 17, DateTimeKind.Local).AddTicks(9716),
-                            HouseId = 3,
-                            Rating = 5,
-                            UserId = "1"
-                        });
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("DataAccess.Data.Entities.User", b =>
@@ -589,7 +563,8 @@ namespace DataAccess.Migrations
                     b.HasOne("DataAccess.Data.Entities.User", "User")
                         .WithMany("Bookings")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("House");
 
@@ -630,7 +605,7 @@ namespace DataAccess.Migrations
                     b.Navigation("House");
                 });
 
-            modelBuilder.Entity("DataAccess.Data.Entities.HouseReview", b =>
+            modelBuilder.Entity("DataAccess.Data.Entities.Review", b =>
                 {
                     b.HasOne("DataAccess.Data.Entities.House", "House")
                         .WithMany("Reviews")
@@ -639,9 +614,10 @@ namespace DataAccess.Migrations
                         .IsRequired();
 
                     b.HasOne("DataAccess.Data.Entities.User", "User")
-                        .WithMany("HouseReviews")
+                        .WithMany("Reviews")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("House");
 
@@ -717,11 +693,11 @@ namespace DataAccess.Migrations
                 {
                     b.Navigation("Bookings");
 
-                    b.Navigation("HouseReviews");
-
                     b.Navigation("OwnedHouses");
 
                     b.Navigation("RentedHouses");
+
+                    b.Navigation("Reviews");
                 });
 #pragma warning restore 612, 618
         }

@@ -46,12 +46,13 @@ namespace BuisnessLogic.Configurations
             CreateMap<CreateCategoryDto, Category>();
 
 
+            CreateMap<PaginationObj<House>, PaginationDto<HouseDto>>();
+
+
             // HouseImage → HouseImageDto
             CreateMap<HouseImage, HouseImageDto>();
 
             // Review → ReviewDto
-            CreateMap<Review, ReviewDto>()
-                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.User.Id));
 
             // Booking → BookingDto
             CreateMap<Booking, BookingDto>()

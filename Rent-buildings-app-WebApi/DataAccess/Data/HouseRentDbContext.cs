@@ -11,10 +11,10 @@ namespace DataAccess.Data
 
         public DbSet<House> Houses { get; set; }
         public DbSet<HouseImage> HouseImages { get; set; }
-        public DbSet<Review> Reviews { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Category> Categories { get; set; }
 
+        public DbSet<HouseReview> HouseReviews { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -23,7 +23,7 @@ namespace DataAccess.Data
             modelBuilder.SeedHouses();
             modelBuilder.SeedHouseImages();
             modelBuilder.SeedCategories();
-            //modelBuilder.SeedReviews();
+            modelBuilder.SeedReviews();
             //modelBuilder.SeedBookings();
 
 
@@ -77,6 +77,25 @@ namespace DataAccess.Data
             //    .OnDelete(DeleteBehavior.Cascade);
 
 
+            // House - HouseReview (один будинок має багато відгуків)
+            modelBuilder.Entity<HouseReview>()
+                .HasOne(r => r.House)
+                .WithMany(h => h.Reviews)
+                .HasForeignKey(r => r.HouseId)
+                .OnDelete(DeleteBehavior.Cascade);
+            // Якщо видалили House — видаляються всі Reviews
+
+
+            // HouseReview - User (один користувач має багато відгуків)
+            modelBuilder.Entity<HouseReview>()
+                .HasOne(r => r.User)
+                .WithMany(u => u.HouseReviews)
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+            // Якщо видалити User — видаляються його Reviews
+
+
+
             modelBuilder.Entity<House>()
                 .HasOne(h => h.Owner)
                 .WithMany(u => u.OwnedHouses)
@@ -108,20 +127,20 @@ namespace DataAccess.Data
                 .HasForeignKey(img => img.HouseId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // House - Review
-            modelBuilder.Entity<Review>()
-                .HasOne(r => r.House)
-                .WithMany(h => h.Reviews)
-                .HasForeignKey(r => r.HouseId)
-                .OnDelete(DeleteBehavior.Cascade);
+            //// House - Review
+            //modelBuilder.Entity<Review>()
+            //    .HasOne(r => r.House)
+            //    .WithMany(h => h.Reviews)
+            //    .HasForeignKey(r => r.HouseId)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
-            // Review - User
-            modelBuilder.Entity<Review>()
-                .HasOne(r => r.User)
-                .WithMany(u => u.Reviews)
-                .HasForeignKey(r => r.UserId)
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Cascade);
+            //// Review - User
+            //modelBuilder.Entity<Review>()
+            //    .HasOne(r => r.User)
+            //    .WithMany(u => u.Reviews)
+            //    .HasForeignKey(r => r.UserId)
+            //    .IsRequired()
+            //    .OnDelete(DeleteBehavior.Cascade);
 
 
             // Booking - House

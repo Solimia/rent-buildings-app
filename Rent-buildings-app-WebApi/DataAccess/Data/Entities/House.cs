@@ -8,12 +8,15 @@
         public string Title { get; set; }
         public string Description { get; set; }
 
+        public string MainimgUrl { get; set; }
+
         // Розташування
         public string Address { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
 
         // Характеристики
+        public int Bathrooms { get; set; }
         public int Rooms { get; set; }
         public int MaxGuests { get; set; }
         public double Area { get; set; }
@@ -44,7 +47,7 @@
 
         // Рейтинг
         public double Rating { get; set; }
-        public List<Review> Reviews { get; set; } = new List<Review>();
+        public List<HouseReview> Reviews { get; set; } = new List<HouseReview>();
 
         // Власник
         public string? OwnerId { get; set; }
@@ -60,6 +63,8 @@
         // Фото
         public List<HouseImage> Images { get; set; } = new List<HouseImage>();
         public List<Booking> Bookings { get; set; } = new List<Booking>();// історія бронювань
+
+
 
     }
 
