@@ -80,9 +80,9 @@ namespace Rent_buildings_app_WebApi.Controllers
         }
 
         [HttpGet("GetHousePagination")]
-        public async Task<IActionResult> GetHousePaginationController(int page,int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating)
+        public async Task<IActionResult> GetHousePaginationController(int page,int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating,string? searchP)
         {
-            var houses = await houseService.GetHousePagination(page, size, CategoryId, BedroomsCountm, BathroomsCount, Rating);
+            var houses = await houseService.GetHousePagination(page, size, CategoryId, BedroomsCountm, BathroomsCount, Rating, searchP);
             return Ok(houses);
         }
         [HttpGet("{id}/details")]

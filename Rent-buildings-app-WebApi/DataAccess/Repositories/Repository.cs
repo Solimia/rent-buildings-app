@@ -35,7 +35,7 @@ namespace DataAccess.Repositories
 
             return await entities.ToListAsync();
         }
-        public async Task<PaginationObj<House>> GetHousePagination(int page = 0,int size = 12,string? CategoryId = "All", string? BedroomsCountm = "Any", string? BathroomsCount = "Any", string? Rating = "Any")
+        public async Task<PaginationObj<House>> GetHousePagination(int page = 0,int size = 12,string? CategoryId = "All", string? BedroomsCountm = "Any", string? BathroomsCount = "Any", string? Rating = "Any",string? searchP = "")
         {
             //var entities = context.Houses.Where().Skip((page - 1) * size).Take(size);
             var query = context.Houses.AsQueryable();
@@ -53,7 +53,11 @@ namespace DataAccess.Repositories
             }
             if (Rating != null && Rating != "Any")
             {
-                query = query.Where(h => Math.Floor(h.Rating) >= int.Parse(Rating));
+                query = query.Where(h => Math.Floor(h.Rating) == int.Parse(Rating));
+            }
+            if(searchP != null && searchP != "")
+            {
+                query = query.Where(h => h.Title.Contains(searchP));
             }
             var totalcountC = query.Count();
 

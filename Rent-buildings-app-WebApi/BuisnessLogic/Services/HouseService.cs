@@ -50,9 +50,9 @@ namespace BuisnessLogic.Services
             var houses = await houseRepository.GetAllWithIncludesAsync(h => h.Category);
             return mapper.Map<IEnumerable<HouseDto>>(houses);
         }
-        public async Task<PaginationDto<HouseDto>> GetHousePagination(int page, int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating)
+        public async Task<PaginationDto<HouseDto>> GetHousePagination(int page, int size, string? CategoryId, string? BedroomsCountm, string? BathroomsCount, string? Rating,string? searchP)
         {
-            var houses = await houseRepository.GetHousePagination(page,size, CategoryId, BedroomsCountm, BathroomsCount, Rating);
+            var houses = await houseRepository.GetHousePagination(page,size, CategoryId, BedroomsCountm, BathroomsCount, Rating, searchP);
             return mapper.Map<PaginationDto<HouseDto>>(houses);
         }
         public async Task<HouseDto> GetHouseByIdAsync(int id)
