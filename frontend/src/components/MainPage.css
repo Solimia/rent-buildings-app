@@ -91,28 +91,36 @@
 
 .Layer4 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 200px;
+    font-size: 130px;
     font-weight: bolder;
     letter-spacing: -5px;
-    width: min-content;
+    width: 80vw;
     z-index: 2;
     color: white;
     position: absolute;
+    height: min-content;
     top: 17%;
     left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
 }
 
 .mSpan2 {
     display: inline-block;
     width: auto;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 200px;
+    /* background-color: red; */
     font-weight: bolder;
     letter-spacing: -5px;
     z-index: 2;
     color: white;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 
@@ -342,4 +350,8 @@
     font-family: 'Underground', Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: var(--ft-color-master);
+}
+
+.BackgroundPage {
+    margin-top: 50px;
 }

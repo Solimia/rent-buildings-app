@@ -3,6 +3,8 @@ import "./MainPage.css"
 import { motion } from 'framer-motion';
 import CardMove from './CardMove';
 import { CounterContext } from '../context/counter_context';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 export default function MainPage() {
 
@@ -85,10 +87,25 @@ export default function MainPage() {
     }, 3000);
     return () => clearInterval(interval);
   }, [ImageIndex]);
-  const text = "GLASSHAVEN"
+  const text = "Your dream house"
+  const [house, setHouse] = useState(null);
 
+  const {id} = useParams();
+
+  async function GetHouse()
+  {
+    let queryGet = await axios.get(`${import.meta.env.VITE_API_URL}/api/Houses/${id}`);
+    console.log("queryGet",queryGet);
+    let response = queryGet.data;
+    console.log("response",response);
+    setHouse(response);
+  }
+
+  useEffect(()=>{
+    GetHouse();
+  },[])
   return (
-    <div className='BackgroundPage'>
+    house != null ? <div className='BackgroundPage'>
 
       <div className='FirstCol'>
         <div className='Layer1'></div>
@@ -146,5 +163,6 @@ export default function MainPage() {
       </div>
 
     </div>
+    : <div>Loading...</div>
   )
 }

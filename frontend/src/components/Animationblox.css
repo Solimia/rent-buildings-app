@@ -817,6 +817,11 @@
     text-align: center;
 }
 
+.Link-No-Style {
+    text-decoration: none;
+    color: inherit;
+}
+
 .CloseFilterBtn {
     width: 100%;
     box-sizing: border-box;

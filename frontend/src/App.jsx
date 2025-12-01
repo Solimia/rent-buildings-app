@@ -19,7 +19,7 @@ function App() {
           <Route path='/' element={<LoginPage />}></Route>
 
           <Route path='/' element={<Layout />}>
-            <Route path='/Element' element={<MainPage />}></Route>
+            <Route path='/Element/:id' element={<MainPage />}></Route>
             <Route path='/Main' element={<Animationblox />}></Route>
             <Route path='/page2' element={<Page2 />}></Route>
 
